@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .image {
+    width: 50%;
+    background-color: red;
+  }
+  
+  .text {
+    margin:0;
+    text-align: center;
+    width: 50%;
+    background-color: blue;
+  }
+
+  .heading-1{
+    text-align: center;
+    padding:0.5rem;
+    margin:1rem;
+    font-size:2rem;
+  }
+
+ 
