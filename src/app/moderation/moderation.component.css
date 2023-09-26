@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-side {
+    width:45%;
+    padding: 20px;
+  }
+  
+  .left-side {
+    width:55%;
+    border-style: groove;
+    border-color: coral;
+    border-width: 1px;
+    padding: 20px;
+  }
+
+  .heading{
+    text-align: center;
+  }
+
+  .display-doc{
+    margin:1rem;
+  }
+
+  .document-word{
+    font-size:1.2rem;
+    font-weight: 500;
+  }
+
+  .drop-down{
+    margin:0.4rem;
+    width:40%;
+    
+  }
+
+  .heading-1{
+    font-size:2rem;
+    margin:2rem;
+    text-align: center;
+  }
