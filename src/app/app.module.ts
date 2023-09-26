@@ -11,12 +11,14 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
+import { ModerationFormComponent } from './moderation-form/moderation-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModerationComponent,
     // SubmissionTableComponent
+    ModerationFormComponent
   ],
   imports: [
     BrowserModule,
