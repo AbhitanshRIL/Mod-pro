@@ -4,12 +4,12 @@
   }
   
   .right-side {
-    width:45%;
+    width:50%;
     padding: 20px;
   }
   
   .left-side {
-    width:55%;
+    width:50%;
     border-style: groove;
     border-color: coral;
     border-width: 1px;

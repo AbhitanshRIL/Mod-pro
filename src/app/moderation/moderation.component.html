@@ -3,17 +3,21 @@
 
 <div class="container">
     <div class="left-side">
-        
-      
         <label for="imageSelect" class="document-word">Document:</label>
+
+         
+
         <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">
-        <option *ngFor="let image of imageOptions" [value]="image" >{{ image }} </option>
+            <option *ngFor="let image of imageOptions" [value]="image" >{{imageDetails[image]}} </option>
         </select>
+
         <br>
-        <img class="display-doc" [src]="selectedImage" alt="Selected Image" width="200">
 
+        <h4>{{ imageDetails[selectedImage] }} :</h4>     <!--description-->
 
-        <p>{{ imageDetails[selectedImage] }}</p>     <!--description--> 
+        <img class="display-doc" [src]="selectedImage" alt="Selected Image" width="800">
+
+        
         
         
     </div>
