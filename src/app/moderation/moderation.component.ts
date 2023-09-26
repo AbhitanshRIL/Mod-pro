@@ -5,13 +5,20 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './moderation.component.html',
   styleUrls: ['./moderation.component.css']
 })
+
+
+
 export class ModerationComponent{
+
+  POA:string = '../../assets/Bkg (1).png';
+  POI:string= '../../assets/image1.jpg';
+  Doc1:string = '../../assets/hm5.jfif';
   selectedImage !: string;
-  imageOptions: string[] = ['../../assets/Bkg (1).png', '../../assets/image1.jpg', '../../assets/hm5.jfif']; // Replace with your image URLs
-  imageDetails: { [key: string]: string } = {
-    '../../assets/Bkg (1).png': 'Image 1 Description',
-    '../../assets/image1.jpg': 'Image 2 Description',
-    '../../assets/hm5.jfif': 'Image 3 Description'
+  imageOptions: string[] = [this.POA,this.POI,this.Doc1]; // Replace with your image URLs
+  imageDetails: { [key:string]: string } = {
+    [this.POA] : 'Address Proof',
+    [this.POI] : 'Identity Proof',
+    [this.Doc1] : 'Document'
   };
 
   //dropdown
