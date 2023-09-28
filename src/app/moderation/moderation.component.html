@@ -7,10 +7,14 @@
     
         
         <label for="imageSelect" class="document-word">Document:</label>
+
+         
+
         <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">
           
         <option *ngFor="let image of imageOptions" [value]="image" >{{imageDetails[image]}} </option>
         </select>
+
         <br>
         <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     <!--description--> 
         <img class="display-doc" [src]="selectedImage" alt="Selected Image" >
