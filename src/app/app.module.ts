@@ -12,13 +12,21 @@ import { MatButtonModule } from "@angular/material/button";
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { ModerationFormComponent } from './moderation-form/moderation-form.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ModerationComponent,
     // SubmissionTableComponent
-    ModerationFormComponent
+    ModerationFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -27,7 +35,14 @@ import { ModerationFormComponent } from './moderation-form/moderation-form.compo
     FormsModule,
     MatCardModule, 
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatSelectModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
