@@ -3,20 +3,28 @@
 
 <div class="container">
     <div class="left-side">   
-        <label for="imageSelect" class="document-word">Document:</label>
+        <!-- <label for="imageSelect" class="document-word">Document:</label>
         <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">    
         <option *ngFor="let image of imageOptions" [value]="image" >{{imageDetails[image]}} </option>
         </select>
         <br>
-        <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     <!--description--> 
-        <img class="display-doc" [src]="selectedImage" alt="Selected Image" > 
-        <!-- <mat-form-field>
-        <mat-label>Select</mat-label>
-        <mat-select>
-          <mat-option value="one">First option</mat-option>
-          <mat-option value="two">Second option</mat-option>
-        </mat-select>
-        </mat-form-field> -->    
+        <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     //description 
+        <img class="display-doc" [src]="selectedImage" alt="Selected Image" >  -->
+
+
+        <div>
+          <label for="imageSelect" class="document-word">Document : </label>
+          <mat-form-field>
+            <!-- <mat-label>Select</mat-label> -->
+            <mat-select id="imageSelect" [(ngModel)]="selectedImage">
+              <mat-option *ngFor="let image of imageOptions" [value]="image">{{imageDetails[image]}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+          <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     <!--description--> 
+          <img class="display-doc" [src]="selectedImage" alt="Selected Image" >  
+        </div>
+
     </div>
 
 
@@ -38,7 +46,9 @@
               Currently I am {{panelOpenState ? 'open' : 'closed'}}
             </mat-panel-description>
           </mat-expansion-panel-header>
+
           <div class="form-part">
+
             <div class="form-one-field">
                 <div class="form-label">Applicant's Name:</div>
                 <mat-form-field class="custom-margin">
@@ -91,6 +101,7 @@
                 </mat-select>
               </mat-form-field>
             </div>
+
           </div>
         </mat-expansion-panel>
         
@@ -98,6 +109,7 @@
 
         <mat-expansion-panel (opened)="panelOpenState1 = true"
                        (closed)="panelOpenState1 = false">
+
           <mat-expansion-panel-header>
             <mat-panel-title>
               Address Details
@@ -106,6 +118,8 @@
               Currently I am {{panelOpenState1 ? 'open' : 'closed'}}
             </mat-panel-description>
           </mat-expansion-panel-header>
+
+
           <div class="form-part">
             <div class="form-one-field">
               <div class="form-label">Current Address</div>
@@ -142,6 +156,7 @@
 
             <div class="form-one-field">
               <div class="form-label">Permanent Address</div>
+
               <mat-form-field class="custom-margin width-100">
                 <mat-label>Address Line 1:</mat-label>
                 <input matInput placeholder="Address Line 1" value="E-101, Balaji Kalash">
@@ -171,6 +186,7 @@
                 <mat-label>Pincode:</mat-label>
                 <input matInput placeholder="Pincode" value="410206">
               </mat-form-field>
+
             </div>
           </div>
         </mat-expansion-panel>
