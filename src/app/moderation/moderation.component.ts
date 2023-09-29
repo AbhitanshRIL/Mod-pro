@@ -13,7 +13,7 @@ export class ModerationComponent{
   POA:string = '../../assets/Bkg (1).png';
   POI:string= '../../assets/image1.jpg';
   Doc1:string = '../../assets/hm5.jfif';
-  selectedImage =this.POI;
+  selectedImage =this.POA;
   imageOptions: string[] = [this.POA,this.POI,this.Doc1]; // Replace with your image URLs
   imageDetails: { [key:string]: string } = {
     [this.POA] : 'Address Proof',
