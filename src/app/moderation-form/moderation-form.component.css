@@ -3,18 +3,19 @@
   margin-top: 10px;
 }
 .form{
+  margin: 50px;
 
-    margin-left: 15%;
-      margin-right:15%;
+    
       width: 100%;
   }
 
   .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      width: 58%;
+      width: 90%;
       border-radius: 5px;
-      margin-left: 130px;
+      margin-left: 80px;
+      
       
     }
     
@@ -67,25 +68,23 @@
       
     }
     .fname{
-      padding: 4px 6px;
+    padding: 4px 6px;
     border-radius: 6px;
     border: grey 1px solid;
     margin: 10px 51px;
     }
     
-    .lname{
-      padding: 4px 6px;
-    border-radius: 6px;
-    border: grey 1px solid;
-    margin-left: 25px;
-    }
-    .mname{
-      padding: 4px 6px;
-    border-radius: 6px;
-    border: grey 1px solid;
-    margin-left: 25px;
+    
+    
+.row{
+  display: flex;
 
-    }
+}
+.col-1-AG{
+
+  margin-right: 100px;
+}
+    
     .title{
       margin-left: 26px;
     }
@@ -134,4 +133,32 @@
       margin-inline: 7px;
     }
   
-    
+ /* changes made by yams*/
+ .row-AG{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-right: 80px;
+ }
+ .input-AG{
+  margin-left: 10px;
+  margin-right: 50px;
+ } 
+ .sal-AG{
+  width: 8%;
+ }
+ .gender-AG{
+  display: flex;
+  
+  margin-right: 60px;
+ }
+ .row-AG-YM{
+  margin-left: 60px;
+ } 
+ .nat-AG{
+  margin-left: 65px;
+ }
+ .input-AG-email{
+  width: 26%;
+  margin-right: 45px;
+ }

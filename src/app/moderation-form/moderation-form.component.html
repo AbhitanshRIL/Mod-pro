@@ -1,4 +1,4 @@
-
+<!-- 
 
   
     
@@ -10,52 +10,39 @@
           <h1 class="heading1">KYC Form</h1> 
           <h1 class="heading"> A. Personal details</h1> 
 
-          <!-- applicant detail-->
+          
           <h3 class="title">1.Name of applicant</h3>
           <div class="row">
-            <label for="fname" class="fname_label">First name:</label>
-            <label for="mname" class="lname_label">Middle name:</label>
-            <label for="lname"  class="name_label">Last name:</label><br>
+            <div class="col-1-AG">
+              <label for="fname" class="fname_label">First name:</label>
+              <input type="text" id="fname" name="fname" value="" class="fname">
             </div>
-
+            <div class="col-1-AG">
+              <label for="fname" class="fname_label">Middle Name:</label>
+              <input type="text" id="fname" name="fname" value="" class="fname">
+            </div>
+            <div class="col-1-AG">
+              <label for="fname" class="fname_label">Last Name:</label>
+              <input type="text" id="fname" name="fname" value="" class="fname">
+            </div>
+          </div>
           <div class="row">
-          <input type="text" id="fname" name="fname" value="" class="fname">
-          <input type="text" id="mname" name="mname" value="" class="lname">
-          <input type="text" id="lname" name="lname" value="" class="fname">
+            <div class="col-1-AG">
+              <label for="fname" class="fname_label">Email</label><br>
+              <input type="text" id="fname" name="fname" value="" class="fname">
+            </div>
+            <div class="col-1-AG">
+              <label for="fname" class="fname_label">Phone Number</label><br>
+              <input type="text" id="fname" name="fname" value="" class="fname">
+            </div>
           </div>
 
+          
 
-        <!-- fathr detail-->
-        <h3 class="title">2. Father's/Spouse's Name</h3>
 
-        <div class="row">
-          <label for="fname" class="fname_label">First name:</label>
-          <label for="mname" class="lname_label">Middle name:</label>
-          <label for="lname"  class="name_label">Last name:</label><br>
-          </div>
-
-        <div class="row">
-        <input type="text" id="fname" name="fname" value="" class="fname">
-        <input type="text" id="mname" name="mname" value="" class="lname">
-        <input type="text" id="lname" name="lname" value="" class="fname">
-        </div>
-
-        <h3 class="title">3. Mother's/Spouse's Name</h3>
-
-        <div class="row">
-          <label for="fname" class="fname_label">First name:</label>
-          <label for="mname" class="lname_label">Middle name:</label>
-          <label for="lname"  class="name_label">Last name:</label><br>
-          </div>
-
-        <div class="row">
-        <input type="text" id="fname" name="fname" value="" class="fname">
-        <input type="text" id="mname" name="mname" value="" class="lname">
-        <input type="text" id="lname" name="lname" value="" class="fname">
-        </div>
-
+        
        
-          <!-- Gender detail-->
+          
           <h3 class="title">4. Gender</h3>
           
 
@@ -87,7 +74,7 @@
               </select>
           </div>
           
-           <!-- address detail-->
+          
            <h1 class="heading"> B. Address details</h1> 
            <h3 class="title">Local Address</h3>
 
@@ -162,10 +149,7 @@
             <input type="text" id="city" name="city" value="" class="fname">
           </div>
 
-          <!-- <div class="row">
-            <label for="fname" class="fname_label">State:</label>
           
-            </div> -->
  
  
          <div class="row">
@@ -188,7 +172,7 @@
              </select>
              </div>
 
-             <!-- Family Details -->
+             
 
              <h1 class="heading"> Family details</h1> 
 
@@ -222,7 +206,7 @@
     
            
 
-            <!--img upload-->
+           
             <h1 class="heading"> C. File Upload </h1> 
 
             <div class="row">
@@ -245,4 +229,65 @@
         
     </form>
     
- 
+  -->
+  <div class="form-AG">
+    <h1 class="heading1">KYC Form</h1> 
+    <h1 class="heading"> A. Personal details</h1> 
+    <h3 class="title">1.Name of applicant</h3>
+    <div class="row-AG">
+      
+      
+      <mat-form-field class="sal-AG">
+        <mat-label >Mr.</mat-label>
+        <mat-select>
+          <mat-option value="option">Mr.</mat-option>
+          <mat-option value="option">Mrs.</mat-option>
+          <mat-option value="option">Miss.</mat-option>
+        </mat-select>
+        
+      </mat-form-field>
+      <mat-form-field class="input-AG">
+        <mat-label>First Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="input-AG">
+        <mat-label>Middle Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field class="input-AG">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+    </div>
+    <div class="row-AG-YM">
+      <mat-form-field class="input-AG-email">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com">
+        
+      </mat-form-field>
+      <!-- <mat-form-field class="input-AG">
+        <mat-label>Phone number</mat-label>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
+      </mat-form-field>
+       -->
+       <mat-form-field class="input-AG">
+        <mat-label>Enter phoneNumber</mat-label>
+        <input matInput placeholder="Contact No.: 8989890000">
+        
+      </mat-form-field>
+      <h3 class="title">Gender:</h3>
+        <mat-radio-group aria-label="Select an option" class="input-AG">
+          
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button value="2">Female</mat-radio-button>
+        </mat-radio-group>
+        
+        <mat-form-field class="nat-AG">
+          <mat-label>Nationality</mat-label>
+          <input matInput>
+        </mat-form-field>
+    </div>
+
+  </div>
