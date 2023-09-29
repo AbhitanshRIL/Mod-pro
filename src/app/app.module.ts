@@ -17,13 +17,16 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModerationComponent,
     // SubmissionTableComponent
-    ModerationFormComponent
+    ModerationFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,13 @@ import {MatRadioModule} from '@angular/material/radio';
     MatExpansionModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatRadioModule
+    MatRadioModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatSelectModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

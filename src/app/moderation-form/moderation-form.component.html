@@ -1,103 +1,248 @@
 
-  <div class="row">
+
+  
     
     <form>
      
       <div class="card">
-        <div class="container">
+        <div class="row">
           <div class="col-lg-12">
-          <h4 class="heading1">KYC Form</h4> 
-          <h1 class="heading">Personal details</h1> 
-          <h3>Name of applicant</h3>
-          <div class="col-lg-6"></div>
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value=""><br>
-          <label for="mname">Middle name:</label><br>
-          <input type="text" id="mname" name="mname" value=""><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value=""><br><br>
-         </div>
-         <div class="col-lg-12"> 
-          <h3> Father's/Spouse's Name</h3>
-          <div class="col-lg-6"></div>
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname" value=""><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname" value=""><br><br>
-         </div>
-         <div class="col-lg-12"> 
-            <label for="gender"><h3>Gender</h3></label>
-            <input type="radio" id="male" name="male" value="male">
-            <label for="html">Male</label>
-            <input type="radio" id="female" name="female" value="female">
-            <label for="html">Female</label>
-            <input type="radio" id="other" name="other" value="other">
-            <label for="html">Other</label>
-          <div>
-           <label for="dateOfBirth"><h3>Date of Birth</h3></label>
-           <input type="date" id="dateOfBirth" name="dateOfBirth"required>
+          <h1 class="heading1">KYC Form</h1> 
+          <h1 class="heading"> A. Personal details</h1> 
+
+          <!-- applicant detail-->
+          <h3 class="title">1.Name of applicant</h3>
+          <div class="row">
+            <label for="fname" class="fname_label">First name:</label>
+            <label for="mname" class="lname_label">Middle name:</label>
+            <label for="lname"  class="name_label">Last name:</label><br>
+            </div>
+
+          <div class="row">
+          <input type="text" id="fname" name="fname" value="" class="fname">
+          <input type="text" id="mname" name="mname" value="" class="lname">
+          <input type="text" id="lname" name="lname" value="" class="fname">
           </div>
-           <!-- <div> -->
-         <label for="nationality"><h3>Nationality</h3></label>
-         <select name="nationality" id="nationality">
-         <option value="Indian">Indian</option>
-         <option value="United States">United States</option>
-         <option value="Albania">Albania</option>
-         <option value="Algeria">Algeria</option>
-         </select>
-         
-            </div> 
+
+
+        <!-- fathr detail-->
+        <h3 class="title">2. Father's/Spouse's Name</h3>
+
+        <div class="row">
+          <label for="fname" class="fname_label">First name:</label>
+          <label for="mname" class="lname_label">Middle name:</label>
+          <label for="lname"  class="name_label">Last name:</label><br>
+          </div>
+
+        <div class="row">
+        <input type="text" id="fname" name="fname" value="" class="fname">
+        <input type="text" id="mname" name="mname" value="" class="lname">
+        <input type="text" id="lname" name="lname" value="" class="fname">
+        </div>
+
+        <h3 class="title">3. Mother's/Spouse's Name</h3>
+
+        <div class="row">
+          <label for="fname" class="fname_label">First name:</label>
+          <label for="mname" class="lname_label">Middle name:</label>
+          <label for="lname"  class="name_label">Last name:</label><br>
+          </div>
+
+        <div class="row">
+        <input type="text" id="fname" name="fname" value="" class="fname">
+        <input type="text" id="mname" name="mname" value="" class="lname">
+        <input type="text" id="lname" name="lname" value="" class="fname">
+        </div>
+
+       
+          <!-- Gender detail-->
+          <h3 class="title">4. Gender</h3>
+          
+
+          <div class="row r_btn">
+            <input type="radio" id="male" name="male" value="male">
+            <label class="male">Male</label>
+            <input type="radio" id="female" name="female" value="female">
+            <label class="female">Female</label>
+            <input type="radio" id="other" name="other" value="other">
+            <label class="other">Other</label>
+
+            
+          </div>
+          <h3 class="title">5. Date of Birth</h3>
+
+        <div class="row">
+          <input type="date" id="dateOfBirth" name="dateOfBirth"required class="dropdown">
+        </div>
+
+        <h3 class="title">6. Nationality</h3>
+
+          <div class="row">
+            <select name="nationality" id="nationality" class="dropdown">
+              <option value="Indian">Please Select</option>
+              <option value="Indian">Indian</option>
+              <option value="United States">United States</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              </select>
+          </div>
+          
+           <!-- address detail-->
+           <h1 class="heading"> B. Address details</h1> 
+           <h3 class="title">Local Address</h3>
+
+            <div class="row">
+             <label for="fname" class="fname_label">House number:</label>
+             <label for="lname" class="city_label">House name:</label>
+             <label for="fname" class="pincode_label">Society</label>
+            </div>
+
+          <div class="row">
+            <input type="text" id="sname" name="sname" value="" class="fname">
+            <input type="text" id="city" name="city" value="" class="lname">
+            <input type="text" id="city" name="city" value="" class="fname">
+          </div>
+
+          <div class="row">
+            <label for="fname" class="fname_label">Street:</label>
+            <label for="lname" class="city_label">City:</label>
+            <label for="fname" class="pincode_label">Pincode</label>
+           </div>
+
+         <div class="row">
+           <input type="text" id="sname" name="sname" value="" class="fname">
+           <input type="text" id="city" name="city" value="" class="lname">
+           <input type="text" id="city" name="city" value="" class="fname">
+         </div>
+
+
+        <div class="row">
+          <select name="stname" id="stname" class="state_drop">
+            <option value="Select State">Select State</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Bihar">Bihar</option>
+            <option value="UP">UP</option>
+            <option value="Haryana">Haryana</option>
+          </select>
+          </div>
+
+          <div class="row">
+            <select name="coname" id="coname" class="state_drop">
+              <option value="Select Country">Select Country</option>
+              <option value="Indian">Indian</option>
+              <option value="Canada">Canada</option>
+              <option value="Germany">Germany</option>
+              <option value="United States">United States</option>
+            </select>
+            </div>
+ 
+            <h3 class="title">Permanent Address</h3>
+ 
+             <div class="row">
+              <label for="fname" class="fname_label">House number:</label>
+              <label for="lname" class="city_label">House name:</label>
+              <label for="fname" class="pincode_label">Society</label>
+             </div>
+ 
+           <div class="row">
+             <input type="text" id="sname" name="sname" value="" class="fname">
+             <input type="text" id="city" name="city" value="" class="lname">
+             <input type="text" id="city" name="city" value="" class="fname">
+           </div>
+ 
+           <div class="row">
+             <label for="fname" class="fname_label">Street:</label>
+             <label for="lname" class="city_label">City:</label>
+             <label for="fname" class="pincode_label">Pincode</label>
+            </div>
+ 
+          <div class="row">
+            <input type="text" id="sname" name="sname" value="" class="fname">
+            <input type="text" id="city" name="city" value="" class="lname">
+            <input type="text" id="city" name="city" value="" class="fname">
+          </div>
+
+          <!-- <div class="row">
+            <label for="fname" class="fname_label">State:</label>
+          
+            </div> -->
+ 
+ 
+         <div class="row">
+           <select name="stname" id="stname" class="state_drop">
+             <option value="Select State">Select State</option>
+             <option value="Maharashtra">Maharashtra</option>
+             <option value="Bihar">Bihar</option>
+             <option value="UP">UP</option>
+             <option value="Haryana">Haryana</option>
+           </select>
+           </div>
+ 
+           <div class="row">
+             <select name="coname" id="coname" class="state_drop">
+               <option value="Select Country">Select Country</option>
+               <option value="Indian">Indian</option>
+               <option value="Canada">Canada</option>
+               <option value="Germany">Germany</option>
+               <option value="United States">United States</option>
+             </select>
+             </div>
+
+             <!-- Family Details -->
+
+             <h1 class="heading"> Family details</h1> 
+
+             <h3 class="title">1.Name of Spouse's[Father]</h3>
+             <div class="row">
+               <label for="fname" class="fname_label">First name:</label>
+               <label for="mname" class="lname_label">Middle name:</label>
+               <label for="lname"  class="name_label">Last name:</label><br>
+               </div>
+   
+             <div class="row">
+             <input type="text" id="fname" name="fname" value="" class="fname">
+             <input type="text" id="mname" name="mname" value="" class="lname">
+             <input type="text" id="lname" name="lname" value="" class="fname">
+             </div>
+
+             
+             <h3 class="title">1.Name of Spouse's[Mother]</h3>
+             <div class="row">
+               <label for="fname" class="fname_label">First name:</label>
+               <label for="mname" class="lname_label">Middle name:</label>
+               <label for="lname"  class="name_label">Last name:</label><br>
+               </div>
+   
+             <div class="row">
+             <input type="text" id="fname" name="fname" value="" class="fname">
+             <input type="text" id="mname" name="mname" value="" class="lname">
+             <input type="text" id="lname" name="lname" value="" class="fname">
+             </div>
+    
+    
+           
+
+            <!--img upload-->
+            <h1 class="heading"> C. File Upload </h1> 
+
+            <div class="row">
+            <input type="file" id="img" name="img" accept="image/*" class="fname">
+            </div>
+            
+        
+       
+            <div>
+              <button type="submit" class="submit-button" value="Submit">submit</button>
+              </div>
+          
             
         </div>
-        <div class="container">
-        <h1 class="heading2">Address details</h1> 
-         <!-- <h3 class="sub">Address for Correspondence</h3> -->
-        <!-- <div class="col-lg-12">
-          <input type="text" id="address" name="address" value=""><br> -->
-        <div class="col-lg-6"></div>
-        <label for="sname"> Street Address</label><br>
-        <input type="text" id="sname" name="sname" value=""><br>
-        <label for="cname">City</label><br>
-        <input type="text" id="cname" name="cname" value=""><br>
-        <label for="stname"> State</label><br>
-        <select name="stname" id="stname">
-          <option value="Select State">Select State</option>
-          <option value="Maharashtra">Maharashtra</option>
-          <option value="Bihar">Bihar</option>
-          <option value="UP">UP</option>
-          <option value="Haryana">Haryana</option>
-        </select> <br>
-        <!-- <input type="text" id="sname" name="sname" value=""><br> -->
-        <label for="pinname"> PinCode</label><br>
-        <input type="text" id="pinname" name="pinname" value=""><br>
-        <label for="coname"> Country</label><br>
-        <select name="coname" id="coname">
-          <option value="Select Country">Select Country</option>
-          <option value="Indian">Indian</option>
-          <option value="Canada">Canada</option>
-          <option value="Germany">Germany</option>
-          <option value="United States">United States</option>
-        </select> <br>
-        <!-- <input type="text" id="coname" name="coname" value=""><br> -->
-       </div>
-         
-       <div class="Header">
-        <h1 class="heading3">File Upload 
-      </h1>
         
       </div>
-      <div>
-        <button type="submit" class="submit-button" value="Submit">submit</button>
-        </div>
-      <!-- <div class="container">
-        <div class="col-lg-12">
-          <button type="button"  data-component="button" data-content="">Submit</button>
-    
-           </div> -->
+     
+      
         </div>
         
     </form>
     
-  </div> 
-
-  
+ 
