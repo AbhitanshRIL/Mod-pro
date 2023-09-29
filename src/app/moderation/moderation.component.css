@@ -6,7 +6,7 @@
   .right-side {
     width:50%;
     padding: 10px;
-    box-shadow: -1px 0px 12px 2px rgba(0, 0, 0, 0.1);
+    
     margin:1rem;   
   }
   
@@ -50,6 +50,23 @@
     text-align: center;
     margin-top:0.5rem;
   }
-  .row1{
-    display: flex;
+
+  .custom-margin{
+    margin:0.5rem;
+  }
+
+  .form-subheading{
+    font-size:1.5rem;
+    background-color: aquamarine;
+    padding:1rem;
+  }
+
+  .form-label{
+    font-size:1.2rem;
+    font-weight:500;
+    margin:0.9rem 0;
+  }
+
+  .width-100{
+    width:100%;
   }
