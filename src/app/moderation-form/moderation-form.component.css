@@ -6,15 +6,16 @@
 
     margin-left: 15%;
       margin-right:15%;
-      width: 70%;
+      width: 100%;
   }
 
   .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      width: 40%;
+      width: 58%;
       border-radius: 5px;
-      margin-left: 400px;
+      margin-left: 130px;
+      
     }
     
     .card:hover {
@@ -71,30 +72,43 @@
     border: grey 1px solid;
     margin: 10px 51px;
     }
+    
     .lname{
       padding: 4px 6px;
     border-radius: 6px;
     border: grey 1px solid;
+    margin-left: 25px;
+    }
+    .mname{
+      padding: 4px 6px;
+    border-radius: 6px;
+    border: grey 1px solid;
+    margin-left: 25px;
+
     }
     .title{
       margin-left: 26px;
     }
     .fname_label{
-      margin-left: 48px;
+      margin-left: 57px;
     }
     .lname_label{
-      margin-left: 160px;
+      margin-left: 170px;
+    }
+    .name_label{
+      margin-left: 150px;
     }
     .r_btn{
       margin-left: 46px;
       padding: 4px 0px;
     }
     .dropdown{
+      margin-top: 0px;
       padding: 4px 6px;
     border-radius: 6px;
     border: grey 1px solid;
     margin: 10px 51px;
-    width: 38%;
+    width: 15%;
     }
     .state_drop{
       padding: 4px 6px;
@@ -109,4 +123,15 @@
     .pincode_label{
       margin-left: 205px;
     }
+    .male{
+      margin-inline: 7px;
+    }
+    .female{
+      margin-inline: 7px;
+    }
+
+    .other{
+      margin-inline: 7px;
+    }
+  
     
