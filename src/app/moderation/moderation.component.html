@@ -3,14 +3,6 @@
 
 <div class="container">
     <div class="left-side">   
-        <!-- <label for="imageSelect" class="document-word">Document:</label>
-        <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">    
-        <option *ngFor="let image of imageOptions" [value]="image" >{{imageDetails[image]}} </option>
-        </select>
-        <br>
-        <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     //description 
-        <img class="display-doc" [src]="selectedImage" alt="Selected Image" >  -->
-
 
         <div>
           <label for="imageSelect" class="document-word">Document : </label>
@@ -190,6 +182,11 @@
             </div>
           </div>
         </mat-expansion-panel>
-      </mat-accordion>   
+      </mat-accordion>
+      
+      <button mat-raised-button color="primary" class ="custom-margin">Approve</button>
+      <button mat-raised-button color="primary" class ="custom-margin">Reject</button>
+      <button mat-raised-button color="primary" class ="custom-margin">Update</button>
+      <button mat-raised-button color="primary" class ="custom-margin">Gen AI</button>   
     </div>
 </div>
