@@ -5,9 +5,9 @@ import { ModerationFormComponent } from './moderation-form/moderation-form.compo
 import { SubmissionTableComponent } from './submission-table/submission-table.component';
 
 const routes: Routes = [
-  { path: 'F', component: ModerationComponent },
+  { path: 'Moderation', component: ModerationComponent },
   { path: '', component: ModerationFormComponent },
-  { path: 'S', component:SubmissionTableComponent }
+  { path: 'Submit', component:SubmissionTableComponent }
 ];
 
 @NgModule({
