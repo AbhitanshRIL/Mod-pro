@@ -25,6 +25,7 @@
     
    .heading{
       background-color: #4b7064;
+      color: white;
       text-align:left;
       padding: 10px 23px;
    }
@@ -134,6 +135,10 @@
     }
   
  /* changes made by yams*/
+ .form-AG{
+  width: 80%;
+  margin-left:150px;
+ }
  .row-AG{
   display: flex;
   margin-top: 30px;
@@ -159,6 +164,6 @@
   margin-left: 65px;
  }
  .input-AG-email{
-  width: 26%;
+  width: 30%;
   margin-right: 45px;
  }
