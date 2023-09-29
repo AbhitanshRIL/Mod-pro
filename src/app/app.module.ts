@@ -12,15 +12,13 @@ import { MatButtonModule } from "@angular/material/button";
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { ModerationFormComponent } from './moderation-form/moderation-form.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatSelectModule} from '@angular/material/select';
-
-
 
 
 
@@ -41,6 +39,10 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatTableModule,
     MatInputModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatRadioModule,
     MatFormFieldModule,
     MatRadioModule,
     MatCheckboxModule,
