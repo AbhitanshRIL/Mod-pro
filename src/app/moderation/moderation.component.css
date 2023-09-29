@@ -17,13 +17,14 @@
   margin:1rem;  
 }
 
-.heading{
+.r-heading{
   text-align: center;
+  /* font-weight: 900; */
 }
 
 .display-doc{
   margin:1rem;
-  width:80%;
+  width:95%;
   height:100vh;
   padding: 0px;
 }
@@ -33,13 +34,19 @@
   font-weight: 500;
 }
 
-.heading-1{
-  font-size:2rem;
-  margin:2rem;
+.header-icon{
+  width:70px;
+  height: auto;
+}
+
+.header-icon-div{
   text-align: center;
+  margin-top: 10px;
+
 }
 
 .heading-image{
+  /* font-weight: 900; */
   font-size:1.5rem;
   text-align: center;
   margin-top:0.5rem;
