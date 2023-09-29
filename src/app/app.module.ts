@@ -12,6 +12,11 @@ import { MatButtonModule } from "@angular/material/button";
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { ModerationFormComponent } from './moderation-form/moderation-form.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { ModerationFormComponent } from './moderation-form/moderation-form.compo
     FormsModule,
     MatCardModule, 
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

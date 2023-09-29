@@ -2,26 +2,21 @@
 <div class="heading-1">Moderation Portal</div>
 
 <div class="container">
-    <div class="left-side">
-        
-    
-        
+    <div class="left-side">   
         <label for="imageSelect" class="document-word">Document:</label>
-
-         
-
-        <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">
-          
+        <select class="drop-down" id="imageSelect" [(ngModel)]="selectedImage">    
         <option *ngFor="let image of imageOptions" [value]="image" >{{imageDetails[image]}} </option>
         </select>
-
         <br>
         <div class="heading-image">{{ imageDetails[selectedImage] }}</div>     <!--description--> 
-        <img class="display-doc" [src]="selectedImage" alt="Selected Image" >
-
-
-        
-        
+        <img class="display-doc" [src]="selectedImage" alt="Selected Image" > 
+        <!-- <mat-form-field>
+        <mat-label>Select</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+        </mat-form-field> -->    
     </div>
 
 
@@ -29,7 +24,156 @@
 
     <div class="right-side">
       <h2 class="heading">Form Details</h2>
-      
-    </div>
+      <mat-accordion>
 
+        <!-- Personal Details -->
+
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Personal Details
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="form-part">
+            <div class="form-one-field">
+                <div class="form-label">Applicant's Name:</div>
+                <mat-form-field class="custom-margin">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name" value="Harshvardhan">
+                </mat-form-field>
+
+                <mat-form-field  class="custom-margin">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="First Name" value="W">
+                </mat-form-field>
+
+                <mat-form-field  class="custom-margin">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="First Name" value="Pandey">
+                </mat-form-field>
+            </div>
+
+            <div class="form-one-field">
+              <div class="form-label">Father's/Spouse's Name</div>
+              <mat-form-field class="custom-margin">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="First Name" value="XYZ">
+              </mat-form-field>
+
+              <mat-form-field  class="custom-margin">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name" value="Pandey">
+              </mat-form-field>
+            </div>
+
+            <div>
+              <label>Gender: </label>
+              <mat-radio-group>
+                <mat-radio-button value="male">Male</mat-radio-button>
+                <mat-radio-button value="female">Female</mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+            <div>
+              <label>Date of birth:</label>
+            </div>
+
+            <div>
+              <mat-form-field>
+                <mat-label>Nationality</mat-label>
+                <mat-select>
+                  <mat-option value="one">Indian</mat-option>
+                  <mat-option value="two">Non-Indian</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-expansion-panel>
+        
+        <!-- Address -->
+
+        <mat-expansion-panel (opened)="panelOpenState1 = true"
+                       (closed)="panelOpenState1 = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Address Details
+            </mat-panel-title>
+            <mat-panel-description>
+              Currently I am {{panelOpenState1 ? 'open' : 'closed'}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="form-part">
+            <div class="form-one-field">
+              <div class="form-label">Current Address</div>
+              <mat-form-field class="custom-margin width-100">
+                <mat-label>Address Line 1:</mat-label>
+                <input matInput placeholder="Address Line 1" value="E-101, Balaji Kalash">
+              </mat-form-field>
+
+              <mat-form-field  class="custom-margin width-100">
+                <mat-label>Address Line 2:</mat-label>
+                <input matInput placeholder="Last Name" value="Adaigoan">
+              </mat-form-field>
+
+              <mat-form-field  class="custom-margin">
+                <mat-label>City:</mat-label>
+                <input matInput placeholder="City" value="New Panvel">
+              </mat-form-field>
+
+              <div style="display: inline;" class="custom-margin">
+                <mat-form-field>
+                  <mat-label>State</mat-label>
+                  <mat-select>
+                    <mat-option value="one">Maharastra</mat-option>
+                    <mat-option value="two">Others</mat-option>
+                  </mat-select>         
+                </mat-form-field>
+              </div>
+
+              <mat-form-field  class="custom-margin">
+                <mat-label>Pincode:</mat-label>
+                <input matInput placeholder="Pincode" value="410206">
+              </mat-form-field>
+            </div>
+
+            <div class="form-one-field">
+              <div class="form-label">Permanent Address</div>
+              <mat-form-field class="custom-margin width-100">
+                <mat-label>Address Line 1:</mat-label>
+                <input matInput placeholder="Address Line 1" value="E-101, Balaji Kalash">
+              </mat-form-field>
+
+              <mat-form-field  class="custom-margin width-100">
+                <mat-label>Address Line 2:</mat-label>
+                <input matInput placeholder="Last Name" value="Adaigoan">
+              </mat-form-field>
+
+              <mat-form-field  class="custom-margin">
+                <mat-label>City:</mat-label>
+                <input matInput placeholder="City" value="New Panvel">
+              </mat-form-field>
+
+              <div style="display: inline;" class="custom-margin">
+                <mat-form-field>
+                  <mat-label>State</mat-label>
+                  <mat-select>
+                    <mat-option value="one">Maharastra</mat-option>
+                    <mat-option value="two">Others</mat-option>
+                  </mat-select>    
+                </mat-form-field>
+              </div>
+
+              <mat-form-field  class="custom-margin">
+                <mat-label>Pincode:</mat-label>
+                <input matInput placeholder="Pincode" value="410206">
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>   
+    </div>
 </div>

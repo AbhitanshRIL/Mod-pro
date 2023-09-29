@@ -10,9 +10,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class ModerationComponent{
 
-  POA:string = '../../assets/Bkg (1).png';
-  POI:string= '../../assets/image1.jpg';
-  Doc1:string = '../../assets/hm5.jfif';
+  POA:string = '../../assets/POA.jpg';
+  POI:string= '../../assets/POI.jpg';
+  Doc1:string = '../../assets/image1.jpg';
   selectedImage =this.POA;
   imageOptions: string[] = [this.POA,this.POI,this.Doc1]; // Replace with your image URLs
   imageDetails: { [key:string]: string } = {
@@ -20,6 +20,9 @@ export class ModerationComponent{
     [this.POI] : 'Identity Proof',
     [this.Doc1] : 'Document'
   };
+
+  panelOpenState = false;
+  panelOpenState1 = false;
 
  
 
