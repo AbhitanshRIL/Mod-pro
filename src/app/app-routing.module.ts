@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModerationComponent } from './moderation/moderation.component';
-import { ModerationFormComponent } from './moderation-form/moderation-form.component';
+// import { ModerationFormComponent } from './moderation-form/moderation-form.component';
 import { SubmissionTableComponent } from './submission-table/submission-table.component';
-
+import { KycFormComponent } from './kyc-form/kyc-form.component';
 const routes: Routes = [
   { path: 'Moderation', component: ModerationComponent },
-  { path: '', component: ModerationFormComponent },
+  {path:'', component:KycFormComponent},
+ 
   { path: 'Submit', component:SubmissionTableComponent }
 ];
 
