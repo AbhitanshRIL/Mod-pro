@@ -23,11 +23,13 @@ import { KycFormComponent } from './kyc-form/kyc-form.component';
 
 
 
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModerationComponent,
+  
 
    
     // SubmissionTableComponent
@@ -55,6 +57,7 @@ import { KycFormComponent } from './kyc-form/kyc-form.component';
  
 
 
+    MatNativeDateModule
     
   ],
   providers: [],
