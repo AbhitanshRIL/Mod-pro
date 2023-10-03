@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {StepperOrientation, MatStepperModule} from '@angular/material/stepper';
@@ -26,15 +27,28 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     AsyncPipe,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    CommonModule
   ],
 })
 export class KycFormComponent {
   firstFormGroup = this._formBuilder.group({
-    firstCtrl: ['', Validators.required],
+    title : ['', Validators.required],
+    firstName: ['', Validators.required],
+    middleName: ['', Validators.required],
+    lastName : ['', Validators.required],
+    email : ['', Validators.required],
+    phoneno : ['', Validators.required],
+    nationality : ['', Validators.required],
+    
   });
   secondFormGroup = this._formBuilder.group({
-    secondCtrl: ['', Validators.required],
+    add1 : ['', Validators.required],
+    add2 : ['', Validators.required],
+    city : ['', Validators.required],
+    pincode : ['', Validators.required],
+    state : ['', Validators.required],
+    country : ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
     thirdCtrl: ['', Validators.required],
