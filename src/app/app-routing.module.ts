@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'Moderation', component: ModerationComponent },
   {path:'', component:KycFormComponent},
  
-  { path: 'Submit', component:SubmissionTableComponent }
+  { path: 'S', component:SubmissionTableComponent }
 ];
 
 @NgModule({

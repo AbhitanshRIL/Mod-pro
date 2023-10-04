@@ -47,7 +47,7 @@
 
             
               <mat-form-field class="custom-margin gojoSatoru">
-                <mat-label >Salutation</mat-label>
+                <mat-label >Title</mat-label>
                 <mat-select>
                   <mat-option value="one">Mr.</mat-option>
                   <mat-option value="two">Ms.</mat-option>
@@ -119,116 +119,6 @@
         </div>
       </mat-expansion-panel>
 
-
-      <!-- Family Detail -->
-
-      <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" class="expansion-panel">
-
-        <mat-expansion-panel-header>
-          <mat-panel-title class="custom-font-size">
-            Family Detail
-          </mat-panel-title>
-          <!-- <mat-panel-description>
-              Currently I am {{panelOpenState1 ? 'open' : 'closed'}}
-            </mat-panel-description> -->
-        </mat-expansion-panel-header>
-
-
-        <div class="form-one-field">
-          <div class="form-label">Father's Name:</div>
-
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
-
-          <mat-form-field class="custom-margin">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="First Name" value="Harshvardhan">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Middle Name</mat-label>
-            <input matInput placeholder="First Name" value="W">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="First Name" value="Pandey">
-          </mat-form-field>
-        </div>
-
-        <div class="form-one-field">
-          <div class="form-label">Mother's Name:</div>
-
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
-
-          <mat-form-field class="custom-margin">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="First Name" value="Harshvardhan">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Middle Name</mat-label>
-            <input matInput placeholder="First Name" value="W">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="First Name" value="Pandey">
-          </mat-form-field>
-        </div>
-
-        <div class="form-one-field">
-          <div class="form-label">Spouse's Name:</div>
-
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
-
-          <mat-form-field class="custom-margin">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="First Name" value="Harshvardhan">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Middle Name</mat-label>
-            <input matInput placeholder="First Name" value="W">
-          </mat-form-field>
-
-          <mat-form-field class="custom-margin">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="First Name" value="Pandey">
-          </mat-form-field>
-        </div>
-      </mat-expansion-panel>
-
-
-
-
-
       <!-- Address -->
 
       <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" class="expansion-panel">
@@ -246,14 +136,24 @@
         <div class="form-part">
           <div class="form-one-field">
             <div class="form-label">Current Address</div>
-            <mat-form-field class="custom-margin width-100">
-              <mat-label>Address Line 1:</mat-label>
-              <input matInput placeholder="Address Line 1" value="E-101, Balaji Kalash">
+            <mat-form-field class="custom-margin">
+              <mat-label>House Number</mat-label>
+              <input matInput placeholder="House No." value="E-101">
             </mat-form-field>
 
-            <mat-form-field class="custom-margin width-100">
-              <mat-label>Address Line 2:</mat-label>
-              <input matInput placeholder="Last Name" value="Adaigoan">
+            <mat-form-field class="custom-margin">
+              <mat-label>House Name</mat-label>
+              <input matInput placeholder="House No." value="">
+            </mat-form-field>
+
+            <mat-form-field class="custom-margin">
+              <mat-label>Society</mat-label>
+              <input matInput placeholder="Last Name" value="">
+            </mat-form-field>
+
+            <mat-form-field class="custom-margin">
+              <mat-label>Locality</mat-label>
+              <input matInput placeholder="House No." value="E-101">
             </mat-form-field>
 
             <mat-form-field class="custom-margin">
@@ -279,15 +179,24 @@
 
           <div class="form-one-field">
             <div class="form-label">Permanent Address</div>
-
-            <mat-form-field class="custom-margin width-100">
-              <mat-label>Address Line 1:</mat-label>
-              <input matInput placeholder="Address Line 1" value="E-101, Balaji Kalash">
+            <mat-form-field class="custom-margin">
+              <mat-label>House Number</mat-label>
+              <input matInput placeholder="House No." value="E-101">
             </mat-form-field>
 
-            <mat-form-field class="custom-margin width-100">
-              <mat-label>Address Line 2:</mat-label>
-              <input matInput placeholder="Last Name" value="Adaigoan">
+            <mat-form-field class="custom-margin">
+              <mat-label>House Name</mat-label>
+              <input matInput placeholder="House No." value="">
+            </mat-form-field>
+
+            <mat-form-field class="custom-margin">
+              <mat-label>Society</mat-label>
+              <input matInput placeholder="Last Name" value="">
+            </mat-form-field>
+
+            <mat-form-field class="custom-margin">
+              <mat-label>Locality</mat-label>
+              <input matInput placeholder="House No." value="E-101">
             </mat-form-field>
 
             <mat-form-field class="custom-margin">
@@ -309,11 +218,100 @@
               <mat-label>Pincode:</mat-label>
               <input matInput placeholder="Pincode" value="410206">
             </mat-form-field>
-
           </div>
         </div>
       </mat-expansion-panel>
 
+            <!-- Family Detail -->
+
+            <mat-expansion-panel (opened)="panelOpenState1 = true" (closed)="panelOpenState1 = false" class="expansion-panel">
+
+              <mat-expansion-panel-header>
+                <mat-panel-title class="custom-font-size">
+                  Family Detail
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+                    Currently I am {{panelOpenState1 ? 'open' : 'closed'}}
+                  </mat-panel-description> -->
+              </mat-expansion-panel-header>
+      
+      
+              <div class="form-one-field">
+                <div class="form-label">Father's Name:</div>
+      
+                
+              
+                
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name" value="Harshvardhan">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="First Name" value="W">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="First Name" value="Pandey">
+                </mat-form-field>
+              </div>
+      
+              <div class="form-one-field">
+                <div class="form-label">Mother's Name:</div>
+      
+                
+            
+                
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name" value="Harshvardhan">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="First Name" value="W">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="First Name" value="Pandey">
+                </mat-form-field>
+              </div>
+      
+              <div class="form-one-field">
+                <div class="form-label">Spouse's Name:</div>
+      
+                
+                  <mat-form-field class="custom-margin gojoSatoru">
+                    <mat-label>Title</mat-label>
+                    <mat-select>
+                      <mat-option value="one">Mr.</mat-option>
+                      <mat-option value="two">Ms.</mat-option>
+                      <mat-option value="two">Mrs.</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First Name" value="Harshvardhan">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Middle Name</mat-label>
+                  <input matInput placeholder="First Name" value="W">
+                </mat-form-field>
+      
+                <mat-form-field class="custom-margin">
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="First Name" value="Pandey">
+                </mat-form-field>
+              </div>
+            </mat-expansion-panel>
 
     </mat-accordion>
     <div class="button-wrapper">
