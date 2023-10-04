@@ -2,7 +2,7 @@
 <mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!">
   <!-- Step 1 START -->
   <mat-step [stepControl]="firstFormGroup" label="Personal Details">
-    <form [formGroup]="firstFormGroup">
+    <form [formGroup]="firstFormGroup" class="famdet">
 
       <div class="row-AG-r1-1">
         <p class="label">Name of Applicant:</p>
@@ -76,7 +76,7 @@
   <!-- Step 1 END -->
   <!-- Step 2 START -->
   <mat-step [stepControl]="secondFormGroup" label="Address Details">
-    <form [formGroup]="secondFormGroup">
+    <form [formGroup]="secondFormGroup" class="famdet">
       <h1 class="heading"> A. Permanent Address</h1>
 
       <div class="row-AG-r2">
@@ -195,7 +195,7 @@
 
   <!-- Step 3 START -->
   <mat-step [stepControl]="thirdFormGroup" label="Family Details">
-    <form [formGroup]="thirdFormGroup">  
+    <form [formGroup]="thirdFormGroup" class="famdet">
 
       <div class="row-AG-r3">
         <p class="label">Father's Name:</p>
@@ -283,14 +283,30 @@
   <!-- Step 4 START -->
   <mat-step [stepControl]="thirdFormGroup" label="Upload Documents">
     <!-- <ng-template matStepLabel>Done</ng-template> -->
-    <form [formGroup]="thirdFormGroup">
-      <p>Upload the required documents here.</p>
-      <input id="input-file-id" multiple type="file" />
-      <p>You are done now.</p>
-      <div class="back-next">
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-raised-button color="primary">Submit</button>
-      </div>
+    <form [formGroup]="thirdFormGroup" class="famdet">
+        <div class="uploadDoc">
+            <div class="up1">
+                <p>Upload Identity Proof</p>
+                <input id="input-file-id" multiple type="file" />
+            </div>
+            <div class="up1">
+                <p>Upload Address Proof</p>
+                <input id="input-file-id" multiple type="file" />
+            </div>
+            <div class="up1">
+                <p>Upload Image</p>
+                <input id="input-file-id" multiple type="file" />
+            </div>
+            
+            
+
+           
+        </div>
+        <div class="back-next">
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+      
     </form>
   </mat-step>
   <!-- Step 4 END -->
