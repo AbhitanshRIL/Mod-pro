@@ -43,15 +43,34 @@ export class KycFormComponent {
     
   });
   secondFormGroup = this._formBuilder.group({
-    add1 : ['', Validators.required],
-    add2 : ['', Validators.required],
+    houseno : ['', Validators.required],
+    housename : ['', Validators.required],
+    society : ['', Validators.required],
+    locality : ['', Validators.required],
+    street : ['', Validators.required],
     city : ['', Validators.required],
-    pincode : ['', Validators.required],
     state : ['', Validators.required],
-    country : ['', Validators.required],
+    pincode : ['', Validators.required],
+    houseno1 : ['', Validators.required],
+    housename1 : ['', Validators.required],
+    society1 : ['', Validators.required],
+    locality1 : ['', Validators.required],
+    street1 : ['', Validators.required],
+    city1 : ['', Validators.required],
+    state1: ['', Validators.required],
+    pincode1: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
-    thirdCtrl: ['', Validators.required],
+    f_fname: ['', Validators.required],
+    f_mname: ['', Validators.required],
+    f_lname : ['', Validators.required],
+    m_fname: ['', Validators.required],
+    m_mname: ['', Validators.required],
+    m_lname : ['', Validators.required],
+    s_title: ['', Validators.required],
+    s_fname: ['', Validators.required],  
+    s_mname: ['', Validators.required],
+    s_lname: ['', Validators.required],
   });
   stepperOrientation: Observable<StepperOrientation>;
 

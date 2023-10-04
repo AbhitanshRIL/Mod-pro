@@ -1,229 +1,298 @@
-
-<div class="form-AG">
-
-    
-
-  </div>
-
-  <div class="form-AG">
-
-   
-
-    
-</div>
-<mat-stepper
-  class="example-stepper"
-  [orientation]="(stepperOrientation | async)!">
-  <mat-step [stepControl]="firstFormGroup" label="Fill out your name">
+<h1 class="heading1">KYC Form</h1>
+<mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!">
+  <!-- Step 1 START -->
+  <mat-step [stepControl]="firstFormGroup" label="Personal Details">
     <form [formGroup]="firstFormGroup">
-        <h1 class="heading1">KYC Form</h1>
 
-        <h1 class="heading"> A. Personal details</h1>
-    
-        <h3 class="title">1.Name of applicant</h3>
-    
-        <div class="row-AG">
-    
-         
-    
-         
-    
-          <mat-form-field class="sal-AG">
-    
-            <mat-label >Select</mat-label>
-    
-            <mat-select>
-    
-              <mat-option value="option">Mr.</mat-option>
-    
-              <mat-option value="option">Mrs.</mat-option>
-    
-              <mat-option value="option">Miss.</mat-option>
-    
-            </mat-select>
-    
-            
-    
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG">
-    
-            <mat-label>First Name</mat-label>  
+      <div class="row-AG-r1-1">
+        <p class="label">Name of Applicant:</p>
 
-            <input matInput formControlName="firstName" placeholder="Ex. abcde" required>
+        <mat-form-field class="sal-AG" style="margin-inline: 1rem;">
+          <mat-label>Title</mat-label>
+          <mat-select formControlName="title" placeholder="Mr." required>  
+            <mat-option value="option">Mr.</mat-option>
+            <mat-option value="option">Mrs.</mat-option>    
+            <mat-option value="option">Miss.</mat-option>
+          </mat-select>
+          <mat-error *ngIf="firstFormGroup.get('title')">Title is required</mat-error>
+        </mat-form-field>  
 
-            <mat-error *ngIf="firstFormGroup.get('firstName')">firstName is required</mat-error>
-    
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG">
-      
-            <mat-label>Middle Name</mat-label>
-    
-            <input matInput formControlName="middleName" placeholder="Ex. abcde" required>
-    
-            <mat-error *ngIf="firstFormGroup.get('middleName')">middletName is required</mat-error>
+        <mat-form-field class="input-add-r1">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="firstFormGroup.get('firstName')">FirstName is required</mat-error>  
+        </mat-form-field>
 
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG">
-    
-            <mat-label>Last Name</mat-label>
-    
-            <input matInput formControlName="lastName" placeholder="Ex. abcde" required>
+        <mat-form-field class="input-add-r1">
+          <mat-label>MiddleName</mat-label>
+          <input matInput formControlName="middleName" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="firstFormGroup.get('middleName')">middleName is required</mat-error> 
+        </mat-form-field>
 
-            <mat-error *ngIf="firstFormGroup.get('lastName')">lastName is required</mat-error>
-    
-          </mat-form-field>
-    
-     
-    
-        </div>
-    
-        <div class="row-AG-YM">
-    
-          <mat-form-field class="input-AG-email">
-    
-            <mat-label>Enter your email</mat-label>
-    
-            <input matInput formControlName="email" placeholder="Ex.pat@example.com" required>
-    
-            <mat-error *ngIf="firstFormGroup.get('email')">email is required</mat-error>
-    
-          </mat-form-field>
-    
-       
-    
-           <mat-form-field class="input-AG">
-    
-            <mat-label>Enter phoneNumber</mat-label>
+        <mat-form-field class="input-add-r1">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="firstFormGroup.get('lastName')">lastName is required</mat-error> 
+        </mat-form-field>
+      </div>
 
-            <input matInput formControlName="phoneno" placeholder="Contact No.: 8989890000" required>
+      <div class="row-AG-r1-2">
+        <mat-form-field class="input-email">
+          <mat-label>Enter your email</mat-label>
+          <input matInput formControlName="email" placeholder="pat@example.com" required>
+          <mat-error *ngIf="firstFormGroup.get('email')">email is required</mat-error> 
+        </mat-form-field>
 
-            <mat-error *ngIf="firstFormGroup.get('phoneno')">Phone No. is required</mat-error>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Enter phoneNumber</mat-label>
+          <input matInput formControlName="phoneno" placeholder="Contact No.: 9876543210" required>
+          <mat-error *ngIf="firstFormGroup.get('phoneno')">Phone no is required</mat-error> 
+        </mat-form-field>
+
+        <span class="label">Gender:</span>
+        <mat-radio-group aria-label="Select an option" class="input-add-r1">
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button value="2">Female</mat-radio-button>
+          <mat-radio-button value="3">Others</mat-radio-button>
+         </mat-radio-group>
         
-          </mat-form-field>
-    
-          <h3 class="title">Gender:</h3>
-    
-            <mat-radio-group aria-label="Select an option" class="input-AG">
-    
-             
-    
-              <mat-radio-button value="1">Male</mat-radio-button>
-    
-              <mat-radio-button value="2">Female</mat-radio-button>
-    
-            </mat-radio-group>
-    
-           
-    
-            <mat-form-field class="nat-AG">
-    
-              <mat-label>Nationality</mat-label>
-    
-              <input matInput formControlName="nationality" placeholder="Indian" required>
 
-               <mat-error *ngIf="firstFormGroup.get('nationality')">Nationality is required</mat-error>
-    
-            </mat-form-field>
-    
-        </div>
-    
-     
+        <mat-form-field class="input-add-r1">
+          <mat-label>Nationality</mat-label>
+          <input matInput formControlName="nationality" placeholder="Ex. Indian" required>
+          <mat-error *ngIf="firstFormGroup.get('nationality')">Nationality is required</mat-error> 
+        </mat-form-field>
+
+      </div>
+
+      <div class="back-next">
+        <!-- <button mat-button matStepperNext>Next</button> -->
+         <button type="button" [disabled]="!firstFormGroup.valid" mat-button matStepperNext>Next</button> 
+      </div>
+
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+  <!-- Step 1 END -->
+  <!-- Step 2 START -->
+  <mat-step [stepControl]="secondFormGroup" label="Address Details">
     <form [formGroup]="secondFormGroup">
-        <h1 class="heading"> A. Address Details</h1>
+      <h1 class="heading"> A. Permanent Address</h1>
 
-        <h3 class="title">1.Local Address</h3>
-    
-        <div class="row-AG">
-    
-          <mat-form-field class="input-AG-add">
-    
-            <mat-label>Address Line 1</mat-label>
-    
-            <input matInput formControlName="add1" placeholder="Address1" required>
-    
-    
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG">
-    
-            <mat-label>Address Line 2</mat-label>
-    
-            <input matInput formControlName="add2" placeholder="Address2" required>
-    
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG">
-    
-            <mat-label>City</mat-label>
-    
-            <input matInput formControlName="city" placeholder="Numbai" required>
-    
-          </mat-form-field>
-    
-     
-    
-        </div>
-    
-        <div class="row-AG-YM">
-    
-          <mat-form-field class="input-AG-email">
-    
-            <mat-label>Pincode</mat-label>
-    
-            <input matInput formControlName="pincode" placeholder="400700" required>
-    
-           
-    
-          </mat-form-field>
-    
-          <mat-form-field class="input-AG-email">
-    
-            <mat-label>State</mat-label>
-    
-            <input matInput formControlName="state" placeholder="eg:-Maharashtra" required>
-    
-           
-    
-          </mat-form-field>
-    
-          
-    
-            <mat-form-field class="nat-AG">
-    
-              <mat-label>Country</mat-label>
-    
-              <input matInput formControlName="country" placeholder="eg:-India" required>
+      <div class="row-AG-r2">
+        <mat-form-field class="input-add-r1">
+          <mat-label>House Number</mat-label>
+          <input matInput formControlName="houseno" placeholder="Ex. 123" required>
+          <mat-error *ngIf="secondFormGroup.get('houseno')">House No. is required</mat-error> 
+        </mat-form-field>
 
-            </mat-form-field>
-    
-        </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
-    <form [formGroup]="thirdFormGroup">
-      <mat-form-field>
-        <mat-label>Phone number</mat-label>
-        <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
-      </mat-form-field>
-      <div>
+        <mat-form-field class="input-add-r1">
+          <mat-label>House Name</mat-label>
+          <input matInput formControlName="housename" placeholder="Ex. abc" required>
+          <mat-error *ngIf="secondFormGroup.get('housename')">House Name. is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Society</mat-label>
+          <input matInput formControlName="society" placeholder="Ex. ganesha" required>
+          <mat-error *ngIf="secondFormGroup.get('society')">Society is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Locality</mat-label>
+          <input matInput formControlName="locality" placeholder="Ex. xyz" required>
+          <mat-error *ngIf="secondFormGroup.get('locality')">Locality is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="street" placeholder="Ex. 123" required>
+          <mat-error *ngIf="secondFormGroup.get('street')">Street is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city" placeholder="Ex. Mumbai" required>
+          <mat-error *ngIf="secondFormGroup.get('city')">City is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state" placeholder="Ex. Maharashtra" required>
+          <mat-error *ngIf="secondFormGroup.get('state')">State is required</mat-error> 
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Pincode</mat-label>
+          <input matInput formControlName="pincode" placeholder="Ex. 400700" required>
+          <mat-error *ngIf="secondFormGroup.get('pincode')">Pincode is required</mat-error> 
+        </mat-form-field>
+
+      </div>
+
+
+      <h1 class="heading"> B. Local Address</h1>
+
+
+      <div class="row-AG-r2">
+        <mat-form-field class="input-add-r1">
+          <mat-label>House Number</mat-label>
+          <input matInput formControlName="houseno1" placeholder="Ex. 400700" required>
+          <mat-error *ngIf="secondFormGroup.get('houseno1')">House no is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>House Name</mat-label>
+          <input matInput formControlName="housename1" placeholder="Ex. HouseVilla" required>
+          <mat-error *ngIf="secondFormGroup.get('housename1')">House name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Society</mat-label>
+          <input matInput formControlName="society1" placeholder="Ex. Society" required>
+          <mat-error *ngIf="secondFormGroup.get('society1')">Society is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Locality</mat-label>
+          <input matInput formControlName="locality1" placeholder="Ex. locality" required>
+          <mat-error *ngIf="secondFormGroup.get('locality1')">Locality is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Street</mat-label>
+          <input matInput formControlName="street1" placeholder="Ex. street" required>
+          <mat-error *ngIf="secondFormGroup.get('street1')">Street is required</mat-error>
+         </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city1" placeholder="Ex. Mumbai" required>
+          <mat-error *ngIf="secondFormGroup.get('city1')">City is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>State</mat-label>
+          <input matInput formControlName="state1" placeholder="Ex. Maharashtra" required>
+          <mat-error *ngIf="secondFormGroup.get('state1')">State is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Pincode</mat-label>
+          <input matInput formControlName="pincode1" placeholder="Ex. 400700" required>
+          <mat-error *ngIf="secondFormGroup.get('pincode1')">Pincode is required</mat-error>
+        </mat-form-field>
+
+      </div>
+      <div class="back-next">
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <!-- <button mat-button matStepperNext>Next</button> -->
+        <button type="button" [disabled]="!secondFormGroup.valid" mat-button matStepperNext>Next</button> 
       </div>
     </form>
   </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-    </div>
-  </mat-step>
-</mat-stepper>
+  <!-- Step 2 END -->
 
- 
+  <!-- Step 3 START -->
+  <mat-step [stepControl]="thirdFormGroup" label="Family Details">
+    <form [formGroup]="thirdFormGroup">  
+
+      <div class="row-AG-r3">
+        <p class="label">Father's Name:</p>
+        <mat-form-field class="input-add-r1" style="margin-left: 1rem;">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="f_fname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('f_fname')">FirstName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>MiddleName</mat-label>
+          <input matInput formControlName="f_mname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('f_mname')">MiddleName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="f_lname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('f_lname')">LastName is required</mat-error>  
+        </mat-form-field>
+      </div>
+
+      <div class="row-AG-r3">
+        <p class="label">Mother's Name:</p>
+        <mat-form-field class="input-add-r1" style="margin-left: 1rem;">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="m_fname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('m_fname')">FirstName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>MiddleName</mat-label>
+          <input matInput formControlName="m_mname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('m_mname')">MiddleName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="m_lname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('m_lname')">LastName is required</mat-error>  
+        </mat-form-field>
+      </div>
+
+      <div class="row-AG-r3">
+        <p class="label">Spouse's Name:</p>
+
+        <mat-form-field class="sal-AG" style="margin-inline: 1rem;">
+          <mat-label>Title</mat-label>
+          <mat-select formControlName="s_title" placeholder="Mr." required>
+            <mat-option value="option">Mr.</mat-option>
+            <mat-option value="option">Mrs.</mat-option>
+          </mat-select>
+          <mat-error *ngIf="thirdFormGroup.get('s_title')">Title is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="s_fname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('s_fname')">FirstName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>MiddleName</mat-label>
+          <input matInput formControlName="s_mname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('m_lname')">MiddleName is required</mat-error>  
+        </mat-form-field>
+
+        <mat-form-field class="input-add-r1">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="s_lname" placeholder="Ex. abcde" required>
+          <mat-error *ngIf="thirdFormGroup.get('s_lname')">LastName is required</mat-error>  
+        </mat-form-field>
+      </div>
+  
+      <div class="back-next">
+        <button mat-button matStepperPrevious>Back</button>
+        <!-- <button mat-button matStepperNext>Next</button> -->  
+        <button type="button" [disabled]="!thirdFormGroup.valid" mat-button matStepperNext>Next</button> 
+      </div>
+
+    </form>
+  </mat-step>
+  <!-- Step 3 END -->
+
+  <!-- Step 4 START -->
+  <mat-step [stepControl]="thirdFormGroup" label="Upload Documents">
+    <!-- <ng-template matStepLabel>Done</ng-template> -->
+    <form [formGroup]="thirdFormGroup">
+      <p>Upload the required documents here.</p>
+      <input id="input-file-id" multiple type="file" />
+      <p>You are done now.</p>
+      <div class="back-next">
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-raised-button color="primary">Submit</button>
+      </div>
+    </form>
+  </mat-step>
+  <!-- Step 4 END -->
+
+</mat-stepper>
