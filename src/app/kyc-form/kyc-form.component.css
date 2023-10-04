@@ -350,3 +350,9 @@
   display: flex;
   align-items: center;
 }
+.uploadDoc{
+    display: flex;
+}
+.famdet{
+  margin: 60px;
+}
