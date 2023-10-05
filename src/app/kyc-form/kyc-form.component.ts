@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {StepperOrientation, MatStepperModule} from '@angular/material/stepper';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {MatButtonModule} from '@angular/material/button';
@@ -15,6 +16,13 @@ import { MatSelectModule } from '@angular/material/select';
   selector: 'app-kyc-form',
   templateUrl: './kyc-form.component.html',
   styleUrls: ['./kyc-form.component.css'],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {showError: true},
+    },
+  ],
+
   standalone: true,
   imports: [
     NgSwitch,
@@ -59,6 +67,11 @@ export class KycFormComponent {
     s_title: ['', Validators.required],
     s_fname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
     s_lname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+  });
+  fourthFormGroup = this._formBuilder.group({
+    identity_proof :  ['', Validators.required],
+    address_proof :  ['', Validators.required],
+    upload_image :  ['', Validators.required],
   });
   stepperOrientation: Observable<StepperOrientation>;
 
