@@ -2,11 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApproveDialogComponent } from './approve-dialog/approve-dialog.component';
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
+import { RejectDialogComponent } from './reject-dialog/reject-dialog.component';
+
+
 
 @Component({
   selector: 'app-moderation',
   templateUrl: './moderation.component.html',
-  styleUrls: ['./moderation.component.css']
+ 
+  styleUrls: ['./moderation.component.css'],
+ 
 })
 
 
@@ -33,7 +38,6 @@ export class ModerationComponent{
     console.log("testing by harsh");
     console.log(this.selectedImage);
   }
-   
   constructor(public dialog: MatDialog) {}
   
   openApproveDialog(): void {
@@ -42,6 +46,9 @@ export class ModerationComponent{
 
   openUpdateDialog(): void {
     let dialogRef = this.dialog.open(UpdateDialogComponent);
+  }
+  openRejectDialog(): void {
+    let dialogRef = this.dialog.open(RejectDialogComponent);
   }
 
 }
