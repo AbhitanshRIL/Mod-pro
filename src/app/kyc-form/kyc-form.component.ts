@@ -67,5 +67,18 @@ export class KycFormComponent {
       .observe('(min-width: 800px)')
       .pipe(map(({matches}) => (matches ? 'horizontal' : 'vertical')));
   }
+  onFormSubmit() {
+    if (this.firstFormGroup.valid && this.secondFormGroup.valid && this.thirdFormGroup.valid) {
+      const formData = {
+        personalDetails: this.firstFormGroup.value,
+        addressDetails: this.secondFormGroup.value,
+        familyDetails: this.thirdFormGroup.value
+      };
+      console.log('Form Data:', formData);
+    } else {
+      console.log('Form is invalid. Cannot submit.');
+    }
+  }
+
 
 }

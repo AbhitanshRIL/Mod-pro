@@ -2,7 +2,7 @@
 <mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!">
   <!-- Step 1 START -->
   <mat-step [stepControl]="firstFormGroup" label="Personal Details">
-    <form [formGroup]="firstFormGroup" class="famdet">
+    <form [formGroup]="firstFormGroup" class="famdet" (ngSubmit)="onFormSubmit()">
 
       <div class="row-AG-r1-1">
         <p class="label">Name of Applicant:</p>
@@ -26,7 +26,7 @@
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
-          <mat-label>MiddleName</mat-label>
+          <mat-label>Middle Name</mat-label>
           <input matInput placeholder="Enter MiddleName">
           <!-- <mat-error *ngIf="firstFormGroup.get('middleName')">middleName is required</mat-error>  -->
         </mat-form-field>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="row-AG-r1-2">
-        <p class="label">Other Details</p>
+        <p class="label">Other Details :</p>
         <mat-form-field class="input-email">
           <mat-label>Enter your email</mat-label>
           <input matInput formControlName="email" placeholder="Enter email id" required>
@@ -51,7 +51,7 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>Enter Mobile Number</mat-label>
-          <input matInput formControlName="phoneno" placeholder="Contact No.: 9876543210" required minlength="10" maxlength="10">
+          <input matInput formControlName="phoneno" placeholder="e.g. 9876543210" required minlength="10" maxlength="10">
           <mat-error *ngIf="firstFormGroup.get('phoneno')?.errors?.['required']">Mobile Number is required</mat-error>
           <mat-error *ngIf="firstFormGroup.get('phoneno') !== null && firstFormGroup.get('phoneno')?.errors?.['pattern']">Invalid mobile number format</mat-error>
           <!-- <div *ngIf="firstFormGroup.hasError['pattern']">Enter Valid phone no</div>       -->
@@ -59,7 +59,7 @@
   
         <mat-form-field class="input-add-r1">
           <mat-label>Nationality</mat-label>
-          <input matInput formControlName="nationality" placeholder="Ex. Indian" required>
+          <input matInput formControlName="nationality" placeholder="e.g. Indian" required>
           <mat-error *ngIf="firstFormGroup.get('nationality')">Nationality is required</mat-error> 
         </mat-form-field>
 
@@ -67,8 +67,8 @@
 
       <div class="row-AG-r1-3">
         
-        <span class="label">Gender:</span>
-        <mat-radio-group aria-label="Select an option" class="input-add-r1">
+        <span class="label radio-AG">Gender:</span>
+        <mat-radio-group aria-label="Select an option" >
           <mat-radio-button value="1">Male</mat-radio-button>
           <mat-radio-button value="2">Female</mat-radio-button>
           <mat-radio-button value="3">Others</mat-radio-button>
@@ -77,7 +77,7 @@
 
       <div class="back-next">
         <!-- <button mat-button matStepperNext>Next</button> -->
-         <button type="button" [disabled]="!firstFormGroup.valid" mat-button matStepperNext>Next</button> 
+         <button type="button" [disabled]="!firstFormGroup.valid" mat-button matStepperNext (ngSubmit)="onFormSubmit()">Next</button> 
       </div>
 
     </form>
@@ -198,7 +198,7 @@
       <div class="back-next">
         <button mat-button matStepperPrevious>Back</button>
         <!-- <button mat-button matStepperNext>Next</button> -->
-        <button type="button" [disabled]="!secondFormGroup.valid" mat-button matStepperNext>Next</button> 
+        <button type="button" [disabled]="!secondFormGroup.valid" mat-button matStepperNext (ngSubmit)="onFormSubmit()">Next</button> 
       </div>
     </form>
   </mat-step>
@@ -290,7 +290,7 @@
       <div class="back-next">
         <button mat-button matStepperPrevious>Back</button>
         <!-- <button mat-button matStepperNext>Next</button> -->  
-        <button type="button" [disabled]="!thirdFormGroup.valid" mat-button matStepperNext>Next</button> 
+        <button type="button" [disabled]="!thirdFormGroup.valid" mat-button matStepperNext (ngSubmit)="onFormSubmit()">Next</button> 
       </div>
 
     </form>
@@ -317,7 +317,7 @@
        </div>
         <div class="back-next">
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary">Submit</button>
+            <button mat-raised-button color="primary" type="submit" (click)="onFormSubmit()">Submit</button>
           </div>
       
     </form>

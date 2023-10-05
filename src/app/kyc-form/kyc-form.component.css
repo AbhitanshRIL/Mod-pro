@@ -311,6 +311,7 @@
 
 .sal-AG {
   width: 8%;
+  padding-right: 40px;
 }
 
 .label {
@@ -318,6 +319,7 @@
 }
 
 .input-add-r1 {
+  padding-right: 40px;
   margin-right: 1rem;
 }
 
@@ -328,17 +330,22 @@
 }
 
 .row-AG-r1-2 {
-  /* display: flex;  */
+  display: flex;
   align-items: center;
 }
 
 .row-AG-r1-3
 {
-  align-items: center;
+  padding-right: 30px;
 }
 .input-email {
-  width: 20rem;
+  width: 23rem;
+  padding-left: 60px;
+  padding-right: 43px;
   margin-right: 1rem;
+}
+.radio-AG{
+  padding-right: 6rem;
 }
 
 /* address details */
