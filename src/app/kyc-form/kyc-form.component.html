@@ -19,7 +19,7 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>First Name</mat-label>
-          <input matInput formControlName="firstName" placeholder="Ex. abcde" required>
+          <input matInput type="text" formControlName="firstName" placeholder="Ex. abcde" required>
           <mat-error *ngIf="firstFormGroup.get('firstName')">FirstName is required</mat-error>  
         </mat-form-field>
 
@@ -37,6 +37,7 @@
       </div>
 
       <div class="row-AG-r1-2">
+        <p class="label">Other Details</p>
         <mat-form-field class="input-email">
           <mat-label>Enter your email</mat-label>
           <input matInput formControlName="email" placeholder="pat@example.com" required>
@@ -47,23 +48,26 @@
         <mat-form-field class="input-add-r1">
           <mat-label>Enter phoneNumber</mat-label>
           <input matInput formControlName="phoneno" placeholder="Contact No.: 9876543210" required>
-          <mat-error *ngIf="firstFormGroup.get('phoneno')">Phone no is required</mat-error> 
-        </mat-form-field>
-
-        <span class="label">Gender:</span>
-        <mat-radio-group aria-label="Select an option" class="input-add-r1">
-          <mat-radio-button value="1">Male</mat-radio-button>
-          <mat-radio-button value="2">Female</mat-radio-button>
-          <mat-radio-button value="3">Others</mat-radio-button>
-         </mat-radio-group>
-        
-
+          <mat-error *ngIf="firstFormGroup.get('phoneno')">phoneNumber is required</mat-error> 
+          <!-- <div *ngIf="firstFormGroup.hasError('pattern')">Enter Valid phone no</div>       -->
+          </mat-form-field>  
+  
         <mat-form-field class="input-add-r1">
           <mat-label>Nationality</mat-label>
           <input matInput formControlName="nationality" placeholder="Ex. Indian" required>
           <mat-error *ngIf="firstFormGroup.get('nationality')">Nationality is required</mat-error> 
         </mat-form-field>
 
+      </div>
+
+      <div class="row-AG-r1-3">
+        
+        <span class="label">Gender:</span>
+        <mat-radio-group aria-label="Select an option" class="input-add-r1">
+          <mat-radio-button value="1">Male</mat-radio-button>
+          <mat-radio-button value="2">Female</mat-radio-button>
+          <mat-radio-button value="3">Others</mat-radio-button>
+         </mat-radio-group>
       </div>
 
       <div class="back-next">
@@ -304,7 +308,7 @@
         </div>
         <div class="back-next">
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-raised-button color="primary">Submit</button>
           </div>
       
     </form>

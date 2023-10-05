@@ -68,7 +68,7 @@ export class KycFormComponent {
     m_mname: ['', Validators.required],
     m_lname : ['', Validators.required],
     s_title: ['', Validators.required],
-    s_fname: ['', Validators.required],  
+    s_fname: ['', Validators.required],
     s_mname: ['', Validators.required],
     s_lname: ['', Validators.required],
   });
