@@ -328,11 +328,14 @@
 }
 
 .row-AG-r1-2 {
-  /* display: flex; */
+  /* display: flex;  */
   align-items: center;
 }
 
-
+.row-AG-r1-3
+{
+  align-items: center;
+}
 .input-email {
   width: 20rem;
   margin-right: 1rem;

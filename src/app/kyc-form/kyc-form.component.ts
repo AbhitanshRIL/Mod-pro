@@ -34,43 +34,31 @@ import { MatSelectModule } from '@angular/material/select';
 export class KycFormComponent {
   firstFormGroup = this._formBuilder.group({
     title : ['', Validators.required],
-    firstName: ['', Validators.required],
-    middleName: ['', Validators.required],
-    lastName : ['', Validators.required],
-    email : ['', Validators.required],
-    phoneno : ['', Validators.required],
+    firstName: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    lastName : ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    email : ['', [Validators.required,Validators.email]],
+    phoneno : ['', [Validators.required,Validators.pattern(/^[6-9]\d{9}$/),]],
     nationality : ['', Validators.required],
     
   });
   secondFormGroup = this._formBuilder.group({
-    houseno : ['', Validators.required],
-    housename : ['', Validators.required],
-    society : ['', Validators.required],
-    locality : ['', Validators.required],
-    street : ['', Validators.required],
+    houseno : ['', [Validators.required,Validators.pattern(/^[0-9]+$/),],],
     city : ['', Validators.required],
     state : ['', Validators.required],
     pincode : ['', Validators.required],
-    houseno1 : ['', Validators.required],
-    housename1 : ['', Validators.required],
-    society1 : ['', Validators.required],
-    locality1 : ['', Validators.required],
-    street1 : ['', Validators.required],
+    houseno1 : ['', [Validators.required,Validators.pattern(/^[0-9]+$/),],],
     city1 : ['', Validators.required],
     state1: ['', Validators.required],
     pincode1: ['', Validators.required],
   });
   thirdFormGroup = this._formBuilder.group({
-    f_fname: ['', Validators.required],
-    f_mname: ['', Validators.required],
-    f_lname : ['', Validators.required],
-    m_fname: ['', Validators.required],
-    m_mname: ['', Validators.required],
-    m_lname : ['', Validators.required],
+    f_fname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    f_lname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    m_fname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    m_lname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
     s_title: ['', Validators.required],
-    s_fname: ['', Validators.required],  
-    s_mname: ['', Validators.required],
-    s_lname: ['', Validators.required],
+    s_fname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
+    s_lname: ['', [Validators.required,Validators.pattern(/^[a-zA-Z]+$/),]],
   });
   stepperOrientation: Observable<StepperOrientation>;
 
