@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { RouterModule } from '@angular/router';
 
 export interface PeriodicElement {
   position: number;
@@ -21,7 +22,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './submission-table.component.html',
   styleUrls: ['./submission-table.component.css'],
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule,RouterModule],
 })
 export class SubmissionTableComponent {
   displayedColumns: string[] = ['position', 'name', 'symbol'];
