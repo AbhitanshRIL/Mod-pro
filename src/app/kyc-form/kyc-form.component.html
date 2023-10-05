@@ -1,7 +1,7 @@
 <h1 class="heading1">KYC Form</h1>
-<mat-stepper class="example-stepper" [orientation]="(stepperOrientation | async)!">
+<mat-stepper class="example-stepper" linear [orientation]="(stepperOrientation | async)!">
   <!-- Step 1 START -->
-  <mat-step [stepControl]="firstFormGroup" label="Personal Details">
+  <mat-step [stepControl]="firstFormGroup" completed="false" label="Personal Details" errorMessage="Please fill the required fields.">
     <form [formGroup]="firstFormGroup" class="famdet" (ngSubmit)="onFormSubmit()">
 
       <div class="row-AG-r1-1">
@@ -84,7 +84,7 @@
   </mat-step>
   <!-- Step 1 END -->
   <!-- Step 2 START -->
-  <mat-step [stepControl]="secondFormGroup" label="Address Details">
+  <mat-step [stepControl]="secondFormGroup" completed="false" label="Address Details"  errorMessage="Please fill the required fields.">
     <form [formGroup]="secondFormGroup" class="famdet">
       <h1 class="heading"> A. Permanent Address</h1>
 
@@ -134,8 +134,9 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>Pincode</mat-label>
-          <input matInput formControlName="pincode" placeholder="Ex. 400700" required minlength="6" maxlength="6">
-          <mat-error *ngIf="secondFormGroup.get('pincode')">Pincode is required</mat-error> 
+          <input matInput formControlName="pincode" placeholder="Ex. 400700" required minlength="6" maxlength="6" pattern="[0-9]*">
+          <mat-error *ngIf="secondFormGroup.get('pincode')?.errors?.['required']">Pincode is required</mat-error>
+          <mat-error *ngIf="secondFormGroup.get('pincode') !== null && secondFormGroup.get('pincode')?.errors?.['pattern']">Please enter valid pincode</mat-error>
         </mat-form-field>
 
       </div>
@@ -190,8 +191,9 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>Pincode</mat-label>
-          <input matInput formControlName="pincode1" placeholder="Ex. 400700" required minlength="6" maxlength="6">
-          <mat-error *ngIf="secondFormGroup.get('pincode1')">Pincode is required</mat-error>
+          <input matInput formControlName="pincode1" placeholder="Ex. 400700" required minlength="6" maxlength="6" pattern="[0-9]*">
+          <mat-error *ngIf="secondFormGroup.get('pincode1')?.errors?.['required']">Pincode is required</mat-error>
+          <mat-error *ngIf="secondFormGroup.get('pincode1') !== null && secondFormGroup.get('pincode1')?.errors?.['pattern']">Please enter valid pincode</mat-error>
         </mat-form-field>
 
       </div>
@@ -205,7 +207,7 @@
   <!-- Step 2 END -->
 
   <!-- Step 3 START -->
-  <mat-step [stepControl]="thirdFormGroup" label="Family Details">
+  <mat-step [stepControl]="thirdFormGroup" completed="false" label="Family Details"  errorMessage="Please fill the required fields.">
     <form [formGroup]="thirdFormGroup" class="famdet">
 
       <div class="row-AG-r3">
@@ -298,26 +300,30 @@
   <!-- Step 3 END -->
 
   <!-- Step 4 START -->
-  <mat-step [stepControl]="thirdFormGroup" label="Upload Documents">
+  <mat-step [stepControl]="fourthFormGroup" completed="false" label="Upload Documents"  errorMessage="Please upload the required documents.">
     <!-- <ng-template matStepLabel>Done</ng-template> -->
-    <form [formGroup]="thirdFormGroup" class="famdet">
+    <form [formGroup]="fourthFormGroup" class="famdet">
         <div class="uploadDoc">
             <div class="up1">
                 <p>Upload Identity Proof</p>
-                <input id="input-file-id" multiple type="file" />
-            </div>
+                <input id="input-file-id" formControlName="identity_proof" multiple type="file"  accept=".jpeg, .jpg, .png" required/>  
+                <mat-error *ngIf="fourthFormGroup.get('identity_proof')?.errors?.['required']">Identity Proof is required</mat-error>
+              </div>
             <div class="up1">
                 <p>Upload Address Proof</p>
-                <input id="input-file-id" multiple type="file" />
+                <input id="input-file-id" formControlName="address_proof" multiple type="file"  accept=".jpeg, .jpg, .png"/>
+                <mat-error *ngIf="fourthFormGroup.get('address_proof')?.errors?.['required']">Address Proof is required</mat-error>
             </div>
             <div class="up1">
                 <p>Upload Image</p>
-                <input id="input-file-id" multiple type="file" />
+                <input id="input-file-id" formControlName="upload_image" multiple type="file"  accept=".jpeg, .jpg, .png"/>
+                <mat-error *ngIf="fourthFormGroup.get('upload_image')?.errors?.['required']">Upload Image is required</mat-error>
             </div>
        </div>
         <div class="back-next">
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-raised-button color="primary" type="submit" (click)="onFormSubmit()">Submit</button>
+            <!-- <button mat-raised-button color="primary" type="submit" (click)="onFormSubmit()">Submit</button> -->
+            <button type="button" [disabled]="!fourthFormGroup.valid" mat-raised-button color="primary">Submit</button> 
           </div>
       
     </form>
