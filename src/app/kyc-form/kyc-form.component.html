@@ -19,20 +19,23 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>First Name</mat-label>
-          <input matInput type="text" formControlName="firstName" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="firstFormGroup.get('firstName')">FirstName is required</mat-error>  
+          <input matInput type="text" formControlName="firstName" placeholder="Enter FirstName" required maxlength="30">
+          <!-- <mat-error *ngIf="firstFormGroup.get('firstName')">FirstName is required</mat-error>  -->
+          <mat-error *ngIf="firstFormGroup.get('firstName')?.errors?.['required']">FirstName is required</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('firstName') !== null && firstFormGroup.get('firstName')?.errors?.['pattern']">Only alphabets are allowed</mat-error> 
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>MiddleName</mat-label>
-          <input matInput formControlName="middleName" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="firstFormGroup.get('middleName')">middleName is required</mat-error> 
+          <input matInput placeholder="Enter MiddleName">
+          <!-- <mat-error *ngIf="firstFormGroup.get('middleName')">middleName is required</mat-error>  -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Last Name</mat-label>
-          <input matInput formControlName="lastName" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="firstFormGroup.get('lastName')">lastName is required</mat-error> 
+          <input matInput formControlName="lastName" placeholder="Enter LastName" required minlength="2" maxlength="30">
+          <mat-error *ngIf="firstFormGroup.get('lastName')?.errors?.['required']">LastName is required</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('lastName') !== null && firstFormGroup.get('lastName')?.errors?.['pattern']">Only alphabets are allowed</mat-error> 
         </mat-form-field>
       </div>
 
@@ -40,16 +43,18 @@
         <p class="label">Other Details</p>
         <mat-form-field class="input-email">
           <mat-label>Enter your email</mat-label>
-          <input matInput formControlName="email" placeholder="pat@example.com" required>
-          <mat-error *ngIf="firstFormGroup.get('email')">email is required</mat-error> 
+          <input matInput formControlName="email" placeholder="Enter email id" required>
+          <mat-error *ngIf="firstFormGroup.get('email')?.errors?.['required']">EmailId is required</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('email') !== null && firstFormGroup.get('email')?.errors?.['email']">Invalid email format</mat-error> 
         </mat-form-field>
 
 
         <mat-form-field class="input-add-r1">
-          <mat-label>Enter phoneNumber</mat-label>
-          <input matInput formControlName="phoneno" placeholder="Contact No.: 9876543210" required>
-          <mat-error *ngIf="firstFormGroup.get('phoneno')">phoneNumber is required</mat-error> 
-          <!-- <div *ngIf="firstFormGroup.hasError('pattern')">Enter Valid phone no</div>       -->
+          <mat-label>Enter Mobile Number</mat-label>
+          <input matInput formControlName="phoneno" placeholder="Contact No.: 9876543210" required minlength="10" maxlength="10">
+          <mat-error *ngIf="firstFormGroup.get('phoneno')?.errors?.['required']">Mobile Number is required</mat-error>
+          <mat-error *ngIf="firstFormGroup.get('phoneno') !== null && firstFormGroup.get('phoneno')?.errors?.['pattern']">Invalid mobile number format</mat-error>
+          <!-- <div *ngIf="firstFormGroup.hasError['pattern']">Enter Valid phone no</div>       -->
           </mat-form-field>  
   
         <mat-form-field class="input-add-r1">
@@ -86,32 +91,33 @@
       <div class="row-AG-r2">
         <mat-form-field class="input-add-r1">
           <mat-label>House Number</mat-label>
-          <input matInput formControlName="houseno" placeholder="Ex. 123" required>
-          <mat-error *ngIf="secondFormGroup.get('houseno')">House No. is required</mat-error> 
+          <input matInput formControlName="houseno" placeholder="Enter House no." required>
+          <mat-error *ngIf="secondFormGroup.get('houseno')?.errors?.['required']">House number is required</mat-error>
+          <mat-error *ngIf="secondFormGroup.get('houseno') !== null && secondFormGroup.get('houseno')?.errors?.['pattern']">Only numbers are allowed</mat-error>
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>House Name</mat-label>
-          <input matInput formControlName="housename" placeholder="Ex. abc" required>
-          <mat-error *ngIf="secondFormGroup.get('housename')">House Name. is required</mat-error> 
+          <input matInput placeholder="Enter HouseName">
+          <!-- <mat-error *ngIf="secondFormGroup.get('housename')">House Name. is required</mat-error>  -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Society</mat-label>
-          <input matInput formControlName="society" placeholder="Ex. ganesha" required>
-          <mat-error *ngIf="secondFormGroup.get('society')">Society is required</mat-error> 
+          <input matInput placeholder="Enter Society">
+          <!-- <mat-error *ngIf="secondFormGroup.get('society')">Society is required</mat-error>  -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Locality</mat-label>
-          <input matInput formControlName="locality" placeholder="Ex. xyz" required>
-          <mat-error *ngIf="secondFormGroup.get('locality')">Locality is required</mat-error> 
+          <input matInput placeholder="Enter Locality">
+          <!-- <mat-error *ngIf="secondFormGroup.get('locality')">Locality is required</mat-error>  -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Street</mat-label>
-          <input matInput formControlName="street" placeholder="Ex. 123" required>
-          <mat-error *ngIf="secondFormGroup.get('street')">Street is required</mat-error> 
+          <input matInput placeholder="Enter Street">
+          <!-- <mat-error *ngIf="secondFormGroup.get('street')">Street is required</mat-error>  -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
@@ -128,7 +134,7 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>Pincode</mat-label>
-          <input matInput formControlName="pincode" placeholder="Ex. 400700" required>
+          <input matInput formControlName="pincode" placeholder="Ex. 400700" required minlength="6" maxlength="6">
           <mat-error *ngIf="secondFormGroup.get('pincode')">Pincode is required</mat-error> 
         </mat-form-field>
 
@@ -142,31 +148,32 @@
         <mat-form-field class="input-add-r1">
           <mat-label>House Number</mat-label>
           <input matInput formControlName="houseno1" placeholder="Ex. 400700" required>
-          <mat-error *ngIf="secondFormGroup.get('houseno1')">House no is required</mat-error>
+          <mat-error *ngIf="secondFormGroup.get('houseno1')?.errors?.['required']">House number is required</mat-error>
+          <mat-error *ngIf="secondFormGroup.get('houseno1') !== null && secondFormGroup.get('houseno1')?.errors?.['pattern']">Only numbers are allowed</mat-error>
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>House Name</mat-label>
-          <input matInput formControlName="housename1" placeholder="Ex. HouseVilla" required>
-          <mat-error *ngIf="secondFormGroup.get('housename1')">House name is required</mat-error>
+          <input matInput placeholder="Entre HouseName">
+          <!-- <mat-error *ngIf="secondFormGroup.get('housename1')">House name is required</mat-error> -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Society</mat-label>
-          <input matInput formControlName="society1" placeholder="Ex. Society" required>
-          <mat-error *ngIf="secondFormGroup.get('society1')">Society is required</mat-error>
+          <input matInput placeholder="Enter Society">
+          <!-- <mat-error *ngIf="secondFormGroup.get('society1')">Society is required</mat-error> -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Locality</mat-label>
-          <input matInput formControlName="locality1" placeholder="Ex. locality" required>
-          <mat-error *ngIf="secondFormGroup.get('locality1')">Locality is required</mat-error>
+          <input matInput placeholder="Enter Locality">
+          <!-- <mat-error *ngIf="secondFormGroup.get('locality1')">Locality is required</mat-error> -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Street</mat-label>
-          <input matInput formControlName="street1" placeholder="Ex. street" required>
-          <mat-error *ngIf="secondFormGroup.get('street1')">Street is required</mat-error>
+          <input matInput placeholder="Enter Street">
+          <!-- <mat-error *ngIf="secondFormGroup.get('street1')">Street is required</mat-error> -->
          </mat-form-field>
 
         <mat-form-field class="input-add-r1">
@@ -183,7 +190,7 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>Pincode</mat-label>
-          <input matInput formControlName="pincode1" placeholder="Ex. 400700" required>
+          <input matInput formControlName="pincode1" placeholder="Ex. 400700" required minlength="6" maxlength="6">
           <mat-error *ngIf="secondFormGroup.get('pincode1')">Pincode is required</mat-error>
         </mat-form-field>
 
@@ -205,20 +212,22 @@
         <p class="label">Father's Name:</p>
         <mat-form-field class="input-add-r1" style="margin-left: 1rem;">
           <mat-label>First Name</mat-label>
-          <input matInput formControlName="f_fname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('f_fname')">FirstName is required</mat-error>  
+          <input matInput formControlName="f_fname" placeholder="Enter FirstName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('f_fname')?.errors?.['required']">FirstName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('f_fname') !== null && thirdFormGroup.get('f_fname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>  
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>MiddleName</mat-label>
-          <input matInput formControlName="f_mname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('f_mname')">MiddleName is required</mat-error>  
+          <input matInput placeholder="Enter MiddleName">
+          <!-- <mat-error *ngIf="thirdFormGroup.get('f_mname')">MiddleName is required</mat-error>   -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Last Name</mat-label>
-          <input matInput formControlName="f_lname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('f_lname')">LastName is required</mat-error>  
+          <input matInput formControlName="f_lname" placeholder="Enter LastName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('f_lname')?.errors?.['required']">LastName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('f_lname') !== null && thirdFormGroup.get('f_lname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>  
         </mat-form-field>
       </div>
 
@@ -226,20 +235,22 @@
         <p class="label">Mother's Name:</p>
         <mat-form-field class="input-add-r1" style="margin-left: 1rem;">
           <mat-label>First Name</mat-label>
-          <input matInput formControlName="m_fname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('m_fname')">FirstName is required</mat-error>  
+          <input matInput formControlName="m_fname" placeholder="Enter FirstName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('m_fname')?.errors?.['required']">FirstName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('m_fname') !== null && thirdFormGroup.get('m_fname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>   
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>MiddleName</mat-label>
-          <input matInput formControlName="m_mname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('m_mname')">MiddleName is required</mat-error>  
+          <input matInput placeholder="Enter MiddleName">
+          <!-- <mat-error *ngIf="thirdFormGroup.get('m_mname')">MiddleName is required</mat-error>   -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Last Name</mat-label>
-          <input matInput formControlName="m_lname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('m_lname')">LastName is required</mat-error>  
+          <input matInput formControlName="m_lname" placeholder="Enter LastName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('m_lname')?.errors?.['required']">LastName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('m_lname') !== null && thirdFormGroup.get('m_lname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>   
         </mat-form-field>
       </div>
 
@@ -257,20 +268,22 @@
 
         <mat-form-field class="input-add-r1">
           <mat-label>First Name</mat-label>
-          <input matInput formControlName="s_fname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('s_fname')">FirstName is required</mat-error>  
+          <input matInput formControlName="s_fname" placeholder="Enter FirstName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('s_fname')?.errors?.['required']">FirstName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('s_fname') !== null && thirdFormGroup.get('s_fname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>     
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>MiddleName</mat-label>
-          <input matInput formControlName="s_mname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('m_lname')">MiddleName is required</mat-error>  
+          <input matInput placeholder="Enter MiddleName">
+          <!-- <mat-error *ngIf="thirdFormGroup.get('m_lname')">MiddleName is required</mat-error>   -->
         </mat-form-field>
 
         <mat-form-field class="input-add-r1">
           <mat-label>Last Name</mat-label>
-          <input matInput formControlName="s_lname" placeholder="Ex. abcde" required>
-          <mat-error *ngIf="thirdFormGroup.get('s_lname')">LastName is required</mat-error>  
+          <input matInput formControlName="s_lname" placeholder="Enter LastName" required maxlength="30">
+          <mat-error *ngIf="thirdFormGroup.get('s_lname')?.errors?.['required']">LastName is required</mat-error>
+          <mat-error *ngIf="thirdFormGroup.get('s_lname') !== null && thirdFormGroup.get('s_lname')?.errors?.['pattern']">Only alphabets are allowed</mat-error>     
         </mat-form-field>
       </div>
   
@@ -301,11 +314,7 @@
                 <p>Upload Image</p>
                 <input id="input-file-id" multiple type="file" />
             </div>
-            
-            
-
-           
-        </div>
+       </div>
         <div class="back-next">
             <button mat-button matStepperPrevious>Back</button>
             <button mat-raised-button color="primary">Submit</button>
