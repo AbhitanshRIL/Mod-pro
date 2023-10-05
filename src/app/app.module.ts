@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ModerationComponent } from './moderation/moderation.component'
+import { ModerationComponent } from './moderation/moderation.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
@@ -16,24 +17,20 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatNativeDateModule } from '@angular/material/core';
+
 // import { KycFormComponent } from './kyc-form/kyc-form.component';
-
-
-
-
-
-
-import {MatNativeDateModule} from '@angular/material/core';
+// import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
+// import { ApproveDialogComponent } from './approve-dialog/approve-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModerationComponent,
-  
-
-   
-    // SubmissionTableComponent
-    
+    // UpdateDialogComponent
+    // ApproveDialogComponent,  
+    // SubmissionTableComponent  
  
   ],
   imports: [
@@ -54,7 +51,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatCheckboxModule,
     MatDatepickerModule,
     MatSelectModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatDialogModule
     
   ],
   providers: [],

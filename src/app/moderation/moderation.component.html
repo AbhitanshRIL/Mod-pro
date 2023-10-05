@@ -1,23 +1,24 @@
-
-<div class = "header-icon-div">
+<div class="header-icon-div">
   <img class="header-icon" src="../../assets/download.jpg">
 </div>
 
 <div class="container">
-    <div class="left-side">   
+  <div class="left-side">
 
-        <div>
-          <label for="imageSelect" class="document-word">Document : </label>
-          <mat-form-field>
-            <!-- <mat-label>Select</mat-label> -->
-            <mat-select id="imageSelect" [(ngModel)]="selectedImage">
-              <mat-option *ngFor="let image of imageOptions" [value]="image">{{imageDetails[image]}}</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <br>
-          <div class="heading-image"><h4>{{ imageDetails[selectedImage] }}</h4></div>     <!--description--> 
-          <img class="display-doc" [src]="selectedImage" alt="Selected Image" >  
-        </div>
+    <div>
+      <label for="imageSelect" class="document-word">Document : </label>
+      <mat-form-field>
+        <!-- <mat-label>Select</mat-label> -->
+        <mat-select id="imageSelect" [(ngModel)]="selectedImage">
+          <mat-option *ngFor="let image of imageOptions" [value]="image">{{imageDetails[image]}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <div class="heading-image">
+        <h4>{{ imageDetails[selectedImage] }}</h4>
+      </div> <!--description-->
+      <img class="display-doc" [src]="selectedImage" alt="Selected Image">
+    </div>
 
   </div>
 
@@ -32,7 +33,7 @@
 
       <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="expansion-panel">
         <mat-expansion-panel-header class="expansion-panel-header">
-          <mat-panel-title class="custom-font-size" >
+          <mat-panel-title class="custom-font-size">
             Personal Details
           </mat-panel-title>
           <!-- <mat-panel-description>
@@ -45,16 +46,16 @@
           <div class="form-one-field">
             <div class="form-label">Applicant's Name:</div>
 
-            
-              <mat-form-field class="custom-margin gojoSatoru">
-                <mat-label >Salutation</mat-label>
-                <mat-select>
-                  <mat-option value="one">Mr.</mat-option>
-                  <mat-option value="two">Ms.</mat-option>
-                  <mat-option value="two">Mrs.</mat-option>
-                </mat-select>
-              </mat-form-field>
-            
+
+            <mat-form-field class="custom-margin gojoSatoru">
+              <mat-label>Salutation</mat-label>
+              <mat-select>
+                <mat-option value="one">Mr.</mat-option>
+                <mat-option value="two">Ms.</mat-option>
+                <mat-option value="two">Mrs.</mat-option>
+              </mat-select>
+            </mat-form-field>
+
 
             <mat-form-field class="custom-margin">
               <mat-label>First Name</mat-label>
@@ -114,7 +115,7 @@
             </mat-form-field>
           </div>
 
-          
+
 
         </div>
       </mat-expansion-panel>
@@ -137,16 +138,16 @@
         <div class="form-one-field">
           <div class="form-label">Father's Name:</div>
 
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
+
+          <mat-form-field class="custom-margin gojoSatoru">
+            <mat-label>Salutation</mat-label>
+            <mat-select>
+              <mat-option value="one">Mr.</mat-option>
+              <mat-option value="two">Ms.</mat-option>
+              <mat-option value="two">Mrs.</mat-option>
+            </mat-select>
+          </mat-form-field>
+
 
           <mat-form-field class="custom-margin">
             <mat-label>First Name</mat-label>
@@ -167,16 +168,16 @@
         <div class="form-one-field">
           <div class="form-label">Mother's Name:</div>
 
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
+
+          <mat-form-field class="custom-margin gojoSatoru">
+            <mat-label>Salutation</mat-label>
+            <mat-select>
+              <mat-option value="one">Mr.</mat-option>
+              <mat-option value="two">Ms.</mat-option>
+              <mat-option value="two">Mrs.</mat-option>
+            </mat-select>
+          </mat-form-field>
+
 
           <mat-form-field class="custom-margin">
             <mat-label>First Name</mat-label>
@@ -197,16 +198,16 @@
         <div class="form-one-field">
           <div class="form-label">Spouse's Name:</div>
 
-          
-            <mat-form-field class="custom-margin gojoSatoru">
-              <mat-label >Salutation</mat-label>
-              <mat-select>
-                <mat-option value="one">Mr.</mat-option>
-                <mat-option value="two">Ms.</mat-option>
-                <mat-option value="two">Mrs.</mat-option>
-              </mat-select>
-            </mat-form-field>
-          
+
+          <mat-form-field class="custom-margin gojoSatoru">
+            <mat-label>Salutation</mat-label>
+            <mat-select>
+              <mat-option value="one">Mr.</mat-option>
+              <mat-option value="two">Ms.</mat-option>
+              <mat-option value="two">Mrs.</mat-option>
+            </mat-select>
+          </mat-form-field>
+
 
           <mat-form-field class="custom-margin">
             <mat-label>First Name</mat-label>
@@ -317,10 +318,10 @@
 
     </mat-accordion>
     <div class="button-wrapper">
-    <button mat-raised-button color="primary" class="button-margin">Approve</button>
-    <button mat-raised-button color="primary" class="button-margin">Update</button>
-    <button mat-raised-button color="primary" class="button-margin">Gen AI</button>
-    <button mat-raised-button color="warn"    class="button-margin">Reject</button>
-   </div>
+      <button mat-raised-button color="primary" class="button-margin" (click)="openApproveDialog()">Approve</button>
+      <button mat-raised-button color="primary" class="button-margin" (click)="openUpdateDialog()">Update</button>
+      <button mat-raised-button color="primary" class="button-margin">Gen AI</button>
+      <button mat-raised-button color="warn" class="button-margin">Reject</button>
+    </div>
   </div>
 </div>

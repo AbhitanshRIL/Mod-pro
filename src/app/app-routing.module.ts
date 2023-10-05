@@ -5,7 +5,7 @@ import { ModerationComponent } from './moderation/moderation.component';
 import { SubmissionTableComponent } from './submission-table/submission-table.component';
 import { KycFormComponent } from './kyc-form/kyc-form.component';
 const routes: Routes = [
-  { path: 'm', component: ModerationComponent },
+  { path: 'Moderation', component: ModerationComponent },
   {path:'', component:KycFormComponent},
  
   { path: 'Submit', component:SubmissionTableComponent }
