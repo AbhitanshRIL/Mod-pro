@@ -17,7 +17,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 // import { KycFormComponent } from './kyc-form/kyc-form.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -29,7 +29,7 @@ import {MatNativeDateModule} from '@angular/material/core';
   declarations: [
     AppComponent,
     ModerationComponent,
-  
+
 
    
     // SubmissionTableComponent
@@ -57,8 +57,8 @@ import {MatNativeDateModule} from '@angular/material/core';
  
 
 
-    MatNativeDateModule
-    
+    MatNativeDateModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
