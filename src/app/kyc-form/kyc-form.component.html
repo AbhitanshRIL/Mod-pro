@@ -323,7 +323,7 @@
         <div class="back-next">
             <button mat-button matStepperPrevious>Back</button>
             <!-- <button mat-raised-button color="primary" type="submit" (click)="onFormSubmit()">Submit</button> -->
-            <button type="button" [disabled]="!fourthFormGroup.valid" mat-raised-button color="primary">Submit</button> 
+            <button type="submit" [disabled]="!fourthFormGroup.valid" mat-raised-button color="primary" (click)="onFormSubmit()">Submit</button> 
           </div>
       
     </form>
